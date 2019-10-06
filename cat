@@ -1,0 +1,79 @@
+We will see cat command here:
+
+
+fokhrul@fokhrul-VirtualBox:~$ cat     ;One feature is cat echoes whatever we type
+Hello world       ;I typed Hello world
+Hello world       ;Terminal echoed Hellow world
+echo input        ;I typed echo input
+echo input        Terminal echoed echo input
+
+fokhrul@fokhrul-VirtualBox:~$ ls
+beaumont.txt  Downloads         out.txt   Templates
+Desktop       examples.desktop  Pictures  Videos
+Documents     Music             Public
+
+fokhrul@fokhrul-VirtualBox:~$ cat out.txt     ;prints the contents of out.txt
+Bangladesh is my home country.
+
+I love Bangladesh.
+Love you Bangladesh.
+
+fokhrul@fokhrul-VirtualBox:~$ cat beaumont.txt
+I studied at Lamar University.
+
+My major was Electrical Engineering.
+
+fokhrul@fokhrul-VirtualBox:~$ cat out.txt beaumont.txt    ;Printing contents of two files
+Bangladesh is my home country.
+
+I love Bangladesh.
+Love you Bangladesh.
+I studied at Lamar University.
+
+My major was Electrical Engineering.
+
+fokhrul@fokhrul-VirtualBox:~$ cat -b out.txt      ;Shows line number of all lines excluding blank ones
+     1	Bangladesh is my home country.
+
+     2	I love Bangladesh.
+     3	Love you Bangladesh.
+
+fokhrul@fokhrul-VirtualBox:~$ cat -n out.txt    ;Numbers blank lines too.
+     1	Bangladesh is my home country.
+     2	
+     3	I love Bangladesh.
+     4	Love you Bangladesh.
+     
+fokhrul@fokhrul-VirtualBox:~$ >new.txt    ;Created a new file. I manually edited the file.
+fokhrul@fokhrul-VirtualBox:~$ cat new.txt     ;Look at the blank lines.
+Who am I?
+
+
+
+
+
+
+
+
+!!!!!!!!!!!
+
+I am Fokhrul.
+
+
+
+Oh, sorry! I was kidding.
+
+fokhrul@fokhrul-VirtualBox:~$ cat -s new.txt    ;Squeezes multiple blank lines into a single blank line.
+Who am I?
+
+!!!!!!!!!!!
+
+I am Fokhrul.
+
+Oh, sorry! I was kidding.
+
+fokhrul@fokhrul-VirtualBox:~$ cat -E out.txt    ;Added a dollar sign at the end of each line
+Bangladesh is my home country.$
+$
+I love Bangladesh.$
+Love you Bangladesh.$
