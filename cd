@@ -1,0 +1,74 @@
+The command cd is used to go to different directories.
+
+fokhrul@fokhrul-VirtualBox:~$ cd        ;Always takes us to the home directory
+fokhrul@fokhrul-VirtualBox:~$ cd /      ;Takes to the root directory
+fokhrul@fokhrul-VirtualBox:/$ pwd
+/
+fokhrul@fokhrul-VirtualBox:/$ cd ~      ;Takes to the home directory
+fokhrul@fokhrul-VirtualBox:~$ pwd
+/home/fokhrul
+
+fokhrul@fokhrul-VirtualBox:~$ cd ..     ;Takes to the parent directory of current directory
+fokhrul@fokhrul-VirtualBox:/home$ cd ~  
+fokhrul@fokhrul-VirtualBox:~$ ls ..
+fokhrul
+
+fokhrul@fokhrul-VirtualBox:~$ pwd
+/home/fokhrul
+fokhrul@fokhrul-VirtualBox:~$ cd ..
+fokhrul@fokhrul-VirtualBox:/home$ pwd
+/home
+fokhrul@fokhrul-VirtualBox:/home$ cd ~
+fokhrul@fokhrul-VirtualBox:~$ cd ../..
+fokhrul@fokhrul-VirtualBox:/$ pwd
+/
+fokhrul@fokhrul-VirtualBox:/$ cd ~
+fokhrul@fokhrul-VirtualBox:~$ ls
+Desktop    Downloads         Music    Pictures  Templates
+Documents  examples.desktop  out.txt  Public    Videos
+
+fokhrul@fokhrul-VirtualBox:~$ cd Documents/
+fokhrul@fokhrul-VirtualBox:~/Documents$ ls
+fokhrul
+fokhrul@fokhrul-VirtualBox:~/Documents$ ls    ;Actually before entering this command, I changed the name fokhrul to new folder
+'new folder'
+
+fokhrul@fokhrul-VirtualBox:~/Documents$ cd
+fokhrul@fokhrul-VirtualBox:~$ cd Downloads/
+fokhrul@fokhrul-VirtualBox:~/Downloads$ ls
+colorful-of-dahlia-pink-flower-in-beautiful-garden-royalty-free-image-825886130-1554743243.jpg
+test
+Wikipedia_files
+Wikipedia.html
+fokhrul@fokhrul-VirtualBox:~/Downloads$ ls test   :test contains nothing
+fokhrul@fokhrul-VirtualBox:~/Downloads$ ls Wikipedia.html
+Wikipedia.html
+fokhrul@fokhrul-VirtualBox:~/Downloads$ cd Wikipedia.html/
+bash: cd: Wikipedia.html/: Not a directory        ; wikipedia.html is just a html file
+
+fokhrul@fokhrul-VirtualBox:~/Downloads$ cd
+fokhrul@fokhrul-VirtualBox:~$ ls
+Desktop    Downloads         Music    Pictures  Templates
+Documents  examples.desktop  out.txt  Public    Videos
+
+fokhrul@fokhrul-VirtualBox:~$ cd Videos
+fokhrul@fokhrul-VirtualBox:~/Videos$ ls
+'My video'
+
+fokhrul@fokhrul-VirtualBox:~/Videos$ cd ..
+fokhrul@fokhrul-VirtualBox:~$ cd Videos/My video/
+bash: cd: too many arguments          ; cd takes only one argument like this.
+
+fokhrul@fokhrul-VirtualBox:~$ cd Videos
+fokhrul@fokhrul-VirtualBox:~/Videos$ ls
+'My video'
+fokhrul@fokhrul-VirtualBox:~/Videos$ cd My video
+bash: cd: too many arguments
+
+fokhrul@fokhrul-VirtualBox:~/Videos$ cd My\ video     ;Correct command to access My video folder
+fokhrul@fokhrul-VirtualBox:~/Videos/My video$ cd ..
+fokhrul@fokhrul-VirtualBox:~/Videos$ cd "My video"    ;Second way to access My video
+fokhrul@fokhrul-VirtualBox:~/Videos/My video$ cd ..
+fokhrul@fokhrul-VirtualBox:~/Videos$ cd 'My video'    ;Third way to access My video
+
+
