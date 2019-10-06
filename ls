@@ -3,21 +3,21 @@ The syntax of ls command is below:
       ls [options] [fd]        ;Here, fd=file directory
 
 
-fokhrul@fokhrul-VirtualBox:~$ ls ~
+fokhrul@fokhrul-VirtualBox:~$ ls ~    ; Shows contents of home directory
 Desktop    Downloads         Music     Public     Videos
 Documents  examples.desktop  Pictures  Templates
 
-fokhrul@fokhrul-VirtualBox:~$ ls /home/fokhrul/
+fokhrul@fokhrul-VirtualBox:~$ ls /home/fokhrul/     ; Shows contents of home directory
 Desktop    Downloads         Music     Public     Videos
 Documents  examples.desktop  Pictures  Templates
 
 fokhrul@fokhrul-VirtualBox:~$ ls /home/fokhrul/Documents/
-fokhrul     ;NOTE:fokhrul is the file name in the directory
+fokhrul     ;NOTE:fokhrul is a folder name in the directory
 fokhrul@fokhrul-VirtualBox:~$ ls /home/fokhrul/Documents/fokhrul
-
+                        ;It is blank. Because the folder fokhrul contains nothing.
 fokhrul@fokhrul-VirtualBox:~$ ls ..   ;Takes us one step back in the directory
 fokhrul
-fokhrul@fokhrul-VirtualBox:~$ ls ../..    ;Takes us two step back in the directory
+fokhrul@fokhrul-VirtualBox:~$ ls ../..    ;Takes us two step back in the directory to root directory
 bin    home            lost+found  root  swapfile  vmlinuz
 boot   initrd.img      media       run   sys
 cdrom  initrd.img.old  mnt         sbin  tmp
