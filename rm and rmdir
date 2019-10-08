@@ -1,0 +1,248 @@
+rmdir helps to remove directories
+
+
+fokhrul@fokhrul-VirtualBox:~$ cd Desktop/
+fokhrul@fokhrul-VirtualBox:~/Desktop$ rmdir file      ;file has subdirectories. So we can't remove it like this
+rmdir: failed to remove 'file': Directory not empty
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir country
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+country  file  image  video
+fokhrul@fokhrul-VirtualBox:~/Desktop$ rmdir country     ;Removing country directory
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+file  image  video
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cd file/
+fokhrul@fokhrul-VirtualBox:~/Desktop/file$ ls
+file1  file2  file3
+fokhrul@fokhrul-VirtualBox:~/Desktop/file$ cd ..
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir -p a/b/c/d/e    ;Creating a directory structure
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+a  file  image  video
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cd a/
+fokhrul@fokhrul-VirtualBox:~/Desktop/a$ ls
+b
+fokhrul@fokhrul-VirtualBox:~/Desktop/a$ cd ..
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -R     ;Showing the directory structures
+.:
+a  file  image  video
+
+./a:
+b
+
+./a/b:
+c
+
+./a/b/c:
+d
+
+./a/b/c/d:
+e
+
+./a/b/c/d/e:
+
+./file:
+file1  file2  file3
+
+./file/file1:
+
+./file/file2:
+
+./file/file3:
+
+./image:
+pics
+
+./image/pics:
+
+./video:
+movies
+
+./video/movies:
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ rmdir a/b/c/d/e     ;Removing just e
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -R       ;e is not there
+.:
+a  file  image  video
+
+./a:
+b
+
+./a/b:
+c
+
+./a/b/c:
+d
+
+./a/b/c/d:
+
+./file:
+file1  file2  file3
+
+./file/file1:
+
+./file/file2:
+
+./file/file3:
+
+./image:
+pics
+
+./image/pics:
+
+./video:
+movies
+
+./video/movies:
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ rmdir -p a/b/c/d/   ;Removing the whole structure
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -R
+.:
+file  image  video
+
+./file:
+file1  file2  file3
+
+./file/file1:
+
+./file/file2:
+
+./file/file3:
+
+./image:
+pics
+
+./image/pics:
+
+./video:
+movies
+
+./video/movies:
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir -p a/b/c/d/e    creating the directory structure again
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -R
+.:
+a
+
+./a:
+b
+
+./a/b:
+c
+
+./a/b/c:
+d
+
+./a/b/c/d:
+e
+
+./a/b/c/d/e:
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ rmdir -pv a/b/c/d/e   ;Removing the structure. Using v to see the step by step process
+rmdir: removing directory, 'a/b/c/d/e'
+rmdir: removing directory, 'a/b/c/d'
+rmdir: removing directory, 'a/b/c'
+rmdir: removing directory, 'a/b'
+rmdir: removing directory, 'a'
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir -p a/b/c/d/e
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cd a/b/
+fokhrul@fokhrul-VirtualBox:~/Desktop/a/b$ cat >me.txt       ;Creating a file in b
+Hi, This is Md Fokhrul Alam
+fokhrul@fokhrul-VirtualBox:~/Desktop/a/b$ ls
+c  me.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop/a/b$ ls -R
+.:
+c  me.txt
+
+./c:
+d
+
+./c/d:
+e
+
+./c/d/e:
+fokhrul@fokhrul-VirtualBox:~/Desktop/a/b$ cd ../..
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -R
+.:
+a
+
+./a:
+b
+
+./a/b:
+c  me.txt
+
+./a/b/c:
+d
+
+./a/b/c/d:
+e
+
+./a/b/c/d/e:
+fokhrul@fokhrul-VirtualBox:~/Desktop$ rmdir -pv a/b/c/d/e
+rmdir: removing directory, 'a/b/c/d/e'
+rmdir: removing directory, 'a/b/c/d'
+rmdir: removing directory, 'a/b/c'
+rmdir: removing directory, 'a/b'
+rmdir: failed to remove directory 'a/b': Directory not empty      ;Can not remove b as it contains a file
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -R
+.:
+a
+
+./a:
+b
+
+./a/b:
+me.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ rm -rv a/b/   ;Removing the strcuture containing files
+removed 'a/b/me.txt'
+removed directory 'a/b/'
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls      ;a is still there
+a
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir -p a/b/c/
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+a
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -R
+.:
+a
+
+./a:
+b
+
+./a/b:
+c
+
+./a/b/c:
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cd a/b/
+fokhrul@fokhrul-VirtualBox:~/Desktop/a/b$ cat >time.txt
+shlsdjlj
+fokhrul@fokhrul-VirtualBox:~/Desktop/a/b$ cd ../..
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -R
+.:
+a
+
+./a:
+b
+
+./a/b:
+c  time.txt
+
+./a/b/c:
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ rm -rv a    ;Removing the whole structure
+removed 'a/b/time.txt'
+removed directory 'a/b/c'
+removed directory 'a/b'
+removed directory 'a'
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -R     ;No directories in Desktop
+.:
+
+
