@@ -5,7 +5,7 @@ fokhrul@fokhrul-VirtualBox:~$ cat     ;One feature is cat echoes whatever we typ
 Hello world       ;I typed Hello world
 Hello world       ;Terminal echoed Hellow world
 echo input        ;I typed echo input
-echo input        Terminal echoed echo input
+echo input        Terminal echoed echo input       ;Press Ctrl+D to exit it
 
 fokhrul@fokhrul-VirtualBox:~$ ls
 beaumont.txt  Downloads         out.txt   Templates
