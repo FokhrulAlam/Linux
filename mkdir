@@ -1,0 +1,24 @@
+mkdir command helps to create directories.
+
+fokhrul@fokhrul-VirtualBox:~$ ls
+beaumont.txt  examples.desktop  Pictures   Videos
+Desktop       Music             Public     winter.txt
+Documents     new.txt           Templates
+Downloads     out.txt           test1.txt
+
+fokhrul@fokhrul-VirtualBox:~$ cd Desktop/
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir image       ;Creating a directory named image in Desktop
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir image/pics    ;Creating a subdirectory named pics in image
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir video/movies    ;Can't create a directory and its subdirectory together like this
+mkdir: cannot create directory ‘video/movies’: No such file or directory
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir -p video/movies     ;Creating a directory and subdirectory together
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir -p file/{file1,file2,file3}   ;Creating a directory and multiple subdirectories together
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cd file/
+fokhrul@fokhrul-VirtualBox:~/Desktop/file$ ls
+file1  file2  file3
+
+fokhrul@fokhrul-VirtualBox:~/Desktop/file$ cd ..
+fokhrul@fokhrul-VirtualBox:~/Desktop$ 
