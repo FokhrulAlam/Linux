@@ -1,0 +1,80 @@
+
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+country.txt  folder3
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mv country.txt Bangladesh.txt   ;moving changing the name of country to Bangladesh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  folder3
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat Bangladesh.txt
+Bangladesh is my home country
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mv Bangladesh.txt folder3/
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls folder3/
+Bangladesh.txt  country.txt  file1.txt  folder1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+folder3
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat >Bangladesh.txt     ;Creating a new file named Bangladesh
+I was born in Bangladesh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat folder3/Bangladesh.txt    ;
+Bangladesh is my home country
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mv Bangladesh.txt folder3     ;moving Bangladesh.txt from Desktop to folder3
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+folder3
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cd folder3/
+fokhrul@fokhrul-VirtualBox:~/Desktop/folder3$ ls
+Bangladesh.txt  country.txt  file1.txt  folder1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop/folder3$ cat Bangladesh.txt    ;Bangladesh.txt in folder3 is overwritten by Bangladesh.txt moved from Desktop
+I was born in Bangladesh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop/folder3$ cd ..
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+folder3
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat > Bangladesh.txt
+Bangladesh is tremendously beautiful
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mv -i Bangladesh.txt folder3/     ;It will ask for permission to overwrite
+mv: overwrite 'folder3/Bangladesh.txt'? n           ; I typed n. So it won't overwrite.
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls folder3/
+Bangladesh.txt  country.txt  file1.txt  folder1    
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat folder3/Bangladesh.txt
+I was born in Bangladesh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  folder3       ; Bangladesh.txt is still there
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat Bangladesh.txt
+Bangladesh is tremendously beautiful
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir folder1
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  folder1  folder3
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls folder3/
+Bangladesh.txt  country.txt  file1.txt  folder1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls folder1/     ;folder1 is empty
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mv folder3 folder1    ;moving folder3 to folder1
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  folder1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls folder1
+folder3
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls folder1/folder3
+Bangladesh.txt  country.txt  file1.txt  folder1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mv folder1 folder2      ;creating a directory folder2 and moving folder1 to it.
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  folder2         ;folder1 is moved to folder2.
+
