@@ -1,0 +1,28 @@
+touch command is the easiest way to create new empty files in linux. we can not create directories using touch.
+touch helps to create timestamp
+
+
+
+fokhrul@fokhrul-VirtualBox:~$ cd Desktop/
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  folder2
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cd folder2/
+fokhrul@fokhrul-VirtualBox:~/Desktop/folder2$ ls -l
+total 4
+drwxr-xr-x 3 fokhrul fokhrul 4096 Oct  8 12:32 folder3
+
+fokhrul@fokhrul-VirtualBox:~/Desktop/folder2$ touch file1   ;creating a new file
+fokhrul@fokhrul-VirtualBox:~/Desktop/folder2$ ls
+file1  folder3
+
+fokhrul@fokhrul-VirtualBox:~/Desktop/folder2$ ls -l
+total 4
+-rw-r--r-- 1 fokhrul fokhrul    0 Oct  9 08:16 file1
+drwxr-xr-x 3 fokhrul fokhrul 4096 Oct  8 12:32 folder3
+
+fokhrul@fokhrul-VirtualBox:~/Desktop/folder2$ touch file1   ;file1 already exists. So this time file 1's timestamp will change
+fokhrul@fokhrul-VirtualBox:~/Desktop/folder2$ ls -l
+total 4
+-rw-r--r-- 1 fokhrul fokhrul    0 Oct  9 08:19 file1    ;timestamp changed. previously it was Oct 9 08:16
+drwxr-xr-x 3 fokhrul fokhrul 4096 Oct  8 12:32 folder3
