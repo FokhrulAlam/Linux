@@ -1,0 +1,22 @@
+Using less command, we can read the contents of a file in different patterns.
+
+
+fokhrul@fokhrul-VirtualBox:~$ cd Desktop/
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  folder2
+
+
+
+#Suppose, Bangladesh.txt is a very big file. We want to see its contents. We will use different 
+# commands to see the contents in many different ways.
+
+# less Bangladesh.txt   ;Helps to read the contents in parts
+                         To see more contents, use Down Arrow Key.
+                         To go up, use Up Arrow Key.
+                         To see page by page downwards, use Spacebar Key
+                         To see page by page upwards, press b
+                         To go to the end of the file, press G
+                         To go the beginning of the file, press g
+                         To search a specific word downwards such as Bangladesh use /Bangladesh
+                         To search a specific word upwards such as Bangladesh use ?Bangladesh
+                         To quit less command, press q
