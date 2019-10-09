@@ -1,0 +1,14 @@
+nano gives a text editor where we can create different types of files such as .txt, .py, .cpp etc
+
+
+fokhrul@fokhrul-VirtualBox:~$ cd Desktop/
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  folder2
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano file.txt   ;Creating a new file
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  file.txt  folder2
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano file.txt   ;This file is already created. I edited it here
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano abc.py     ;creating a .py file(python)
+
