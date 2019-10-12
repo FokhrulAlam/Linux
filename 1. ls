@@ -109,8 +109,27 @@ Downloads/Wikipedia.html
 
 fokhrul@fokhrul-VirtualBox:~$ ls -lS > out.txt  ;Copies the results of ls -lS commands to out.txt file
 
-fokhrul@fokhrul-VirtualBox:~$ ls -d */   ;Shows all the directories, no files
+fokhrul@fokhrul-VirtualBox:~$ ls -d */   ;Shows all the directories of present working directory, no files. -d means We don't want
+                                                                    to see the subdirectories
 Desktop/    Downloads/  Pictures/  Templates/
 Documents/  Music/      Public/    Videos/
 
 fokhrul@fokhrul-VirtualBox:~$ man ls    ;It is like help() in python. Shows all different commands relating ls
+
+
+# More commands:
+ls */       ;Shows all directories and their contents of the pwd
+ls -d /*/   ;Shows all directories of the root directory    ; 
+ls /        ;Shos all directories and files of the root directory
+ls /*       ;Shows directories and subdirectories of the root directory
+ls /*.*     ;Shows all files of the root directory
+ls Desktop/*.*          ;Shows all files of Desktop
+ls -d Desktop/*/        ;Shows all directories of Desktop
+
+
+
+
+
+
+
+
