@@ -1,0 +1,246 @@
+sudo command is used to give administrative privileges.
+
+fokhrul@fokhrul-VirtualBox:~$ ls /
+bin    initrd.img      mnt   snap      var
+boot   initrd.img.old  opt   srv       vmlinuz
+cdrom  lib             proc  swapfile  vmlinuz.old
+dev    lib64           root  sys
+etc    lost+found      run   tmp
+home   media           sbin  usr
+
+fokhrul@fokhrul-VirtualBox:~$ cd /etc/
+
+fokhrul@fokhrul-VirtualBox:/etc$ ls
+acpi                    lsb-release
+adduser.conf            ltrace.conf
+alternatives            machine-id
+anacrontab              magic
+apg.conf                magic.mime
+apm                     mailcap
+apparmor                mailcap.order
+apparmor.d              manpath.config
+apport                  mime.types
+appstream.conf          mke2fs.conf
+apt                     modprobe.d
+avahi                   modules
+bash.bashrc             modules-load.d
+bash_completion         mtab
+bash_completion.d       mtools.conf
+bindresvport.blacklist  nanorc
+binfmt.d                netplan
+bluetooth               network
+brlapi.key              networkd-dispatcher
+brltty                  NetworkManager
+brltty.conf             networks
+ca-certificates         newt
+ca-certificates.conf    nsswitch.conf
+calendar                opt
+chatscripts             os-release
+console-setup           PackageKit
+cracklib                pam.conf
+cron.d                  pam.d
+cron.daily              papersize
+cron.hourly             passwd
+cron.monthly            passwd-
+crontab                 pcmcia
+cron.weekly             perl
+cups                    pki
+cupshelpers             pm
+dbus-1                  pnm2ppa.conf
+dconf                   polkit-1
+debconf.conf            popularity-contest.conf
+debian_version          ppp
+default                 printcap
+deluser.conf            profile
+depmod.d                profile.d
+dhcp                    protocols
+dictionaries-common     pulse
+dpkg                    python2.7
+emacs                   python3
+environment             python3.6
+firefox                 rc0.d
+fonts                   rc1.d
+fstab                   rc2.d
+fuse.conf               rc3.d
+fwupd                   rc4.d
+gai.conf                rc5.d
+gdb                     rc6.d
+gdm3                    rcS.d
+geoclue                 resolvconf
+ghostscript             resolv.conf
+glvnd                   rmt
+gnome                   rpc
+groff                   rsyslog.conf
+group                   rsyslog.d
+group-                  sane.d
+grub.d                  securetty
+gshadow                 security
+gshadow-                selinux
+gss                     sensors3.conf
+gtk-2.0                 sensors.d
+gtk-3.0                 services
+hdparm.conf             shadow
+host.conf               shadow-
+hostname                shells
+hosts                   skel
+hosts.allow             speech-dispatcher
+hosts.deny              ssh
+hp                      ssl
+ifplugd                 subgid
+ImageMagick-6           subgid-
+init                    subuid
+init.d                  subuid-
+initramfs-tools         sudoers
+inputrc                 sudoers.d
+insserv.conf.d          sysctl.conf
+iproute2                sysctl.d
+issue                   systemd
+issue.net               terminfo
+kernel                  thermald
+kernel-img.conf         thunderbird
+kerneloops.conf         timezone
+ldap                    tmpfiles.d
+ld.so.cache             ucf.conf
+ld.so.conf              udev
+ld.so.conf.d            udisks2
+legal                   ufw
+libao.conf              updatedb.conf
+libaudit.conf           update-manager
+libblockdev             update-motd.d
+libnl-3                 update-notifier
+libpaper.d              UPower
+libreoffice             usb_modeswitch.conf
+lintianrc               usb_modeswitch.d
+locale.alias            vim
+locale.gen              vtrgb
+localtime               wgetrc
+logcheck                wpa_supplicant
+login.defs              X11
+logrotate.conf          xdg
+logrotate.d             zsh_command_not_found
+
+fokhrul@fokhrul-VirtualBox:/etc$ mkdir newdir
+mkdir: cannot create directory ‘newdir’: Permission denied    ;We can't create the directory newdir as we don't have administrative privilege
+
+fokhrul@fokhrul-VirtualBox:/etc$ sudo mkdir newdir    ;This time we can create newdir
+[sudo] password for fokhrul: 
+Sorry, try again.     ;I put a wrong password.
+[sudo] password for fokhrul:        ;This time the password was okay. The password does not show up
+                                    ;In this session, we do not need to put this password anymore
+fokhrul@fokhrul-VirtualBox:/etc$ ls   ;newdir is created. We can see it.
+acpi                    ltrace.conf
+adduser.conf            machine-id
+alternatives            magic
+anacrontab              magic.mime
+apg.conf                mailcap
+apm                     mailcap.order
+apparmor                manpath.config
+apparmor.d              mime.types
+apport                  mke2fs.conf
+appstream.conf          modprobe.d
+apt                     modules
+avahi                   modules-load.d
+bash.bashrc             mtab
+bash_completion         mtools.conf
+bash_completion.d       nanorc
+bindresvport.blacklist  netplan
+binfmt.d                network
+bluetooth               networkd-dispatcher
+brlapi.key              NetworkManager
+brltty                  networks
+brltty.conf             newdir
+ca-certificates         newt
+ca-certificates.conf    nsswitch.conf
+calendar                opt
+chatscripts             os-release
+console-setup           PackageKit
+cracklib                pam.conf
+cron.d                  pam.d
+cron.daily              papersize
+cron.hourly             passwd
+cron.monthly            passwd-
+crontab                 pcmcia
+cron.weekly             perl
+cups                    pki
+cupshelpers             pm
+dbus-1                  pnm2ppa.conf
+dconf                   polkit-1
+debconf.conf            popularity-contest.conf
+debian_version          ppp
+default                 printcap
+deluser.conf            profile
+depmod.d                profile.d
+dhcp                    protocols
+dictionaries-common     pulse
+dpkg                    python2.7
+emacs                   python3
+environment             python3.6
+firefox                 rc0.d
+fonts                   rc1.d
+fstab                   rc2.d
+fuse.conf               rc3.d
+fwupd                   rc4.d
+gai.conf                rc5.d
+gdb                     rc6.d
+gdm3                    rcS.d
+geoclue                 resolvconf
+ghostscript             resolv.conf
+glvnd                   rmt
+gnome                   rpc
+groff                   rsyslog.conf
+group                   rsyslog.d
+group-                  sane.d
+grub.d                  securetty
+gshadow                 security
+gshadow-                selinux
+gss                     sensors3.conf
+gtk-2.0                 sensors.d
+gtk-3.0                 services
+hdparm.conf             shadow
+host.conf               shadow-
+hostname                shells
+hosts                   skel
+hosts.allow             speech-dispatcher
+hosts.deny              ssh
+hp                      ssl
+ifplugd                 subgid
+ImageMagick-6           subgid-
+init                    subuid
+init.d                  subuid-
+initramfs-tools         sudoers
+inputrc                 sudoers.d
+insserv.conf.d          sysctl.conf
+iproute2                sysctl.d
+issue                   systemd
+issue.net               terminfo
+kernel                  thermald
+kernel-img.conf         thunderbird
+kerneloops.conf         timezone
+ldap                    tmpfiles.d
+ld.so.cache             ucf.conf
+ld.so.conf              udev
+ld.so.conf.d            udisks2
+legal                   ufw
+libao.conf              updatedb.conf
+libaudit.conf           update-manager
+libblockdev             update-motd.d
+libnl-3                 update-notifier
+libpaper.d              UPower
+libreoffice             usb_modeswitch.conf
+lintianrc               usb_modeswitch.d
+locale.alias            vim
+locale.gen              vtrgb
+localtime               wgetrc
+logcheck                wpa_supplicant
+login.defs              X11
+logrotate.conf          xdg
+logrotate.d             zsh_command_not_found
+lsb-release
+
+                                        ;Press ctrl+shift+t. A new tab will open
+fokhrul@fokhrul-VirtualBox:/etc$ sudo -s      ;Takes to the sudo mode
+[sudo] password for fokhrul:          ;Asking for password
+root@fokhrul-VirtualBox:/etc#         ;Now we are a root user. See # sign at the end and root at the beginning
+
+root@fokhrul-VirtualBox:/etc# mkdir newdir1       ;newdir1 is created. We did not have to use sudo
+root@fokhrul-VirtualBox:/etc# 
