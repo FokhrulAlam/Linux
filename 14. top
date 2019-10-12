@@ -1,0 +1,9 @@
+top command shows us the running and idle processes, how much cpu they are using etc.
+
+# PID means process ID.
+This page by default refreshes every 3 seconds.
+
+#Some important commands are below:
+# i : used to the running processes. Press i again, it will show running and idle processes.
+# k : used to kill a process.
+# s : used to change the delay time.
