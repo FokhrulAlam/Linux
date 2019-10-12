@@ -1,0 +1,28 @@
+suppose, a process is VirtualBox and pid is 100
+
+Some commands are below:
+
+#pidof VirtualBox       ;Shows the pid of VirtualBox
+#kill 100       ;Kill VirtualBox
+#kill -KILL 100       ;A stronger command to kill VirtualBox
+#kill -9 100        ;Another way to kill virtualBox
+
+
+#Sometimes we don't know the process name. We can use top command. We can use following command too--
+ps -ux    ;Shows processes used by current user
+ps -aux   ; Shows processes used by all users
+ps -U fokhrul karim wasim     ;Shows processes used by fokhrul, karim and wasim
+
+fokhrul@fokhrul-VirtualBox:~$ pidof gnome-control-center
+fokhrul@fokhrul-VirtualBox:~$ pidof gnome-control-center
+3547
+fokhrul@fokhrul-VirtualBox:~$ kill 3547
+fokhrul@fokhrul-VirtualBox:~$ pidof gnome-control-center    ;Everytime a process starts,the process gets a new PID
+3558
+fokhrul@fokhrul-VirtualBox:~$ kill -KILL 3558
+
+fokhrul@fokhrul-VirtualBox:~$ ps -C firefox     ;Shows all the running instances of a process
+  PID TTY          TIME CMD
+ 2519 tty2     00:01:52 firefox
+
+
