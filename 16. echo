@@ -1,0 +1,22 @@
+
+
+fokhrul@fokhrul-VirtualBox:~$ echo hellow world
+hellow world
+
+fokhrul@fokhrul-VirtualBox:~$ echo "hello world. How are you?"
+hello world. How are you?
+
+fokhrul@fokhrul-VirtualBox:~$ name="Mrinal"     ;Declaring a variable "name". Its value is "Mrinal".This variable is valid for this session only.
+fokhrul@fokhrul-VirtualBox:~$ echo $name      ;Printing the value of the variable
+Mrinal
+
+fokhrul@fokhrul-VirtualBox:~$ x=10      ;Declaring another variable
+fokhrul@fokhrul-VirtualBox:~$ echo "The value of x is $x"   ;Printing the value of x
+The value of x is 10
+
+fokhrul@fokhrul-VirtualBox:~$ echo -e 'some \text'    ;Put -e while using \t,\n etc
+some 	ext
+fokhrul@fokhrul-VirtualBox:~$ echo -e 'Fokhrul \nAlam'
+Fokhrul 
+Alam
+
