@@ -1,0 +1,59 @@
+chmod is used to change the permission of the file.
+
+fokhrul@fokhrul-VirtualBox:~$ cd Desktop/
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l
+total 80
+-rw-r--r-- 1 fokhrul fokhrul 77624 Oct  9 07:30 Bangladesh.txt
+NOTE: In -rw-r--r--,  the first dash(-) sign means a normal file. d means a directory, c means a character-special file
+                      b means binary-special file
+                      
+                      1 is symbolic link of the file. Right now, there is only one group.
+                      The first fokhrul is the owner of the file.
+                      The second fokhrul is the group
+                      77624 is the size of the file.
+                      
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod o+x Bangladesh.txt    ;changing the permission for others
+                                                                   o means other, + means adding permission, x means execute
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l
+total 80
+-rw-r--r-x 1 fokhrul fokhrul 77624 Oct  9 07:30 Bangladesh.txt      ;The permission for others is changed
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod o+w Bangladesh.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l
+total 80
+-rw-r--rwx 1 fokhrul fokhrul 77624 Oct  9 07:30 Bangladesh.txt      ;Now others can read,write and execute 
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod g+wx Bangladesh.txt      ;Changing permission for groups
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l
+total 80
+-rw-rwxrwx 1 fokhrul fokhrul 77624 Oct  9 07:30 Bangladesh.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod g-x Bangladesh.txt      ;Taking away execute permission from group
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l
+total 80
+-rw-rw-rwx 1 fokhrul fokhrul 77624 Oct  9 07:30 Bangladesh.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod ug=rwx Bangladesh.txt     ;Giving read,write and execute permissions to user and group
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l
+total 80
+-rwxrwxrwx 1 fokhrul fokhrul 77624 Oct  9 07:30 Bangladesh.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod ugo-rwx Bangladesh.txt    ;Do this and try to open the file. Ha ha ha!
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l
+total 80
+---------- 1 fokhrul fokhrul 77624 Oct  9 07:30 Bangladesh.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod ugo+rwx Bangladesh.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l
+total 80
+-rwxrwxrwx 1 fokhrul fokhrul 77624 Oct  9 07:30 Bangladesh.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod a-rwx Bangladesh.txt      ;Another way to remove all permissions from all
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l
+total 80
+---------- 1 fokhrul fokhrul 77624 Oct  9 07:30 Bangladesh.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod u+rw,g+r,o+r Bangladesh.txt     ;Giving back the original permissions to all
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l
+total 80
+-rw-r--r-- 1 fokhrul fokhrul 77624 Oct  9 07:30 Bangladesh.txt
