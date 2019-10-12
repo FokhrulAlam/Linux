@@ -1,0 +1,76 @@
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l
+total 4
+drwxr-xr-x 2 fokhrul fokhrul 4096 Oct 12 02:44 folder1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -ld folder1
+drwxr-xr-x 2 fokhrul fokhrul 4096 Oct 12 02:44 folder1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod u-w folder1     ;Removing write permission of user
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -ld folder1
+dr-xr-xr-x 2 fokhrul fokhrul 4096 Oct 12 02:44 folder1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cd folder1
+fokhrul@fokhrul-VirtualBox:~/Desktop/folder1$ cat >file1
+bash: file1: Permission denied          ;User can not create a file as user does not have write permission
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod u+w folder1
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l
+total 4
+drwxr-xr-x 2 fokhrul fokhrul 4096 Oct 12 02:44 folder1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod u-r folder1     ;Removing read permission of user
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l
+total 4
+d-wxr-xr-x 2 fokhrul fokhrul 4096 Oct 12 02:44 folder1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cd folder1
+fokhrul@fokhrul-VirtualBox:~/Desktop/folder1$ touch file1
+fokhrul@fokhrul-VirtualBox:~/Desktop/folder1$ ls -l
+ls: cannot open directory '.': Permission denied    ;User does not have read permission
+
+fokhrul@fokhrul-VirtualBox:~/Desktop/folder1$ cd ..
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -ld folder1
+d-wxr-xr-x 2 fokhrul fokhrul 4096 Oct 12 03:03 folder1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod u=r folder1
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls folder1/
+ls: cannot access 'folder1/file1': Permission denied
+file1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cd folder1
+bash: cd: folder1: Permission denied
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -dl folder1
+dr--r-xr-x 2 fokhrul fokhrul 4096 Oct 12 03:03 folder1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod u=wx folder1
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -dl folder1
+d-wxr-xr-x 2 fokhrul fokhrul 4096 Oct 12 03:03 folder1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod u+x folder1
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -dl folder1
+d-wxr-xr-x 2 fokhrul fokhrul 4096 Oct 12 03:03 folder1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod u+r folder1
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -dl folder1
+drwxr-xr-x 2 fokhrul fokhrul 4096 Oct 12 03:03 folder1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls folder1/
+file1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod u-x folder1
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -ld folder1
+drw-r-xr-x 2 fokhrul fokhrul 4096 Oct 12 03:03 folder1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cd folder1/
+bash: cd: folder1/: Permission denied
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls folder1/
+ls: cannot access 'folder1/file1': Permission denied
+file1
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l folder1
+ls: cannot access 'folder1/file1': Permission denied
+total 0
+-????????? ? ? ? ?            ? file1
