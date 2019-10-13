@@ -1,0 +1,28 @@
+userdel command is used to remove users
+
+
+fokhrul@fokhrul-VirtualBox:~$ ls /home/
+fokhrul  hasina
+
+fokhrul@fokhrul-VirtualBox:~$ sudo userdel hasina     ;This command deletes hasina, but her work remains saved. hasina's home
+                                                      ;directory is not deleted
+fokhrul@fokhrul-VirtualBox:~$ ls /home/
+fokhrul  hasina              
+
+fokhrul@fokhrul-VirtualBox:~$ sudo userdel -r hasina      ; -r flag is used to delete both the user and her home directory
+userdel: user 'hasina' does not exist             ;We already deleted hasina in the previous command. So she does not exist.
+
+fokhrul@fokhrul-VirtualBox:~$ sudo useradd khaleda -m -s /bin/bash -g users -c "second user"
+fokhrul@fokhrul-VirtualBox:~$ ls /home/
+fokhrul  hasina  khaleda
+
+fokhrul@fokhrul-VirtualBox:~$ sudo userdel -r khaleda         ;Removing khaleda and her home directory
+userdel: khaleda mail spool (/var/mail/khaleda) not found
+
+fokhrul@fokhrul-VirtualBox:~$ ls /home/       ;khaleda is gone
+fokhrul  hasina
+
+fokhrul@fokhrul-VirtualBox:~$ sudo rm -r /home/hasina/    ;Now we are deleting the home directory of hasina. It is like deleting a directory structure.
+
+fokhrul@fokhrul-VirtualBox:~$ ls /home/       ;Now only the user "fokhrul" exists.
+fokhrul
