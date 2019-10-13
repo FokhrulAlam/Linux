@@ -1,0 +1,16 @@
+watch command helps to run a command or a script at a regular interval
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ watch free -m
+fokhrul@fokhrul-VirtualBox:~/Desktop$ watch -n 5 free -m      ;NOTE: By default, watch executes the command every 2 seconds.
+
+Every 2.0s: free -m                fokhrul-VirtualBox: Sun Oct 13 18:35:28 2019
+
+              total        used        free      shared  buff/cache   available
+Mem:           1776        1163         144          29         468         439
+Swap:           472           6         465
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ watch -n 5 free -m        ;We are changing the interval to 5 seconds
+                                                                ; Press Ctrl+C to exit
+                                                                
+fokhrul@fokhrul-VirtualBox:~/Desktop$ watch -n 0.5 free -m      ;Interval is 0.5 second
+
