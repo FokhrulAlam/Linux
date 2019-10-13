@@ -1,0 +1,39 @@
+
+fokhrul@fokhrul-VirtualBox:~$ cd Desktop/
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano script1.sh       ;Contents of script1.sh is
+                                                            ;#!/bin/bash
+                                                            ;ls -l
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./script1.sh
+bash: ./script1.sh: Permission denied
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod +x script1.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l script1.sh
+-rwxr-xr-x 1 fokhrul fokhrul 19 Oct 13 00:46 script1.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./script1.sh
+total 12
+-rwxr--r-x 1 fokhrul fokhrul  179 Oct 12 15:10 file.txt
+drwxr-xr-x 3 fokhrul fokhrul 4096 Oct 12 15:44 folder1
+-rwxr-xr-x 1 fokhrul fokhrul   19 Oct 13 00:46 script1.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano script1.sh     ;I edited the script.
+                                                          ;#!/bin/bash
+                                                          ;ls 
+                                                          ;echo "Hello world"
+
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./script1.sh
+file.txt  folder1  script1.sh
+Hello world
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano script1.sh     ;Edited the script again
+                                                          ;#!/bin/bash
+                                                          ;ls
+                                                          ;STRING="Hello world"
+                                                          ;echo $STRING
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./script1.sh
+file.txt  folder1  script1.sh
+Hello world
+
