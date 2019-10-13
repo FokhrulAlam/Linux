@@ -1,0 +1,28 @@
+.bashrc file is a script that executes whenever a session starts.
+If it does not exist, we can create it.
+
+
+fokhrul@fokhrul-VirtualBox:~$ pwd
+/home/fokhrul
+fokhrul@fokhrul-VirtualBox:~$ ls -a           ;See the .bashrc file in the first column
+.              Downloads         Pictures
+..             examples.desktop  .profile
+.bash_history  .gnupg            Public
+.bash_logout   .ICEauthority     .sudo_as_admin_successful
+.bashrc        .lesshst          Templates
+beaumont.txt   .local            test1.txt
+.cache         .mozilla          Videos
+.config        Music             winter.txt
+Desktop        new.txt
+Documents      out.txt
+fokhrul@fokhrul-VirtualBox:~$ nano .bashrc    ;we can create or edit a .bashrc file
+fokhrul@fokhrul-VirtualBox:~$ gedit .bashrc   ;It's like a text editor. We can edit the file
+
+
+
+###This is interesting. If we want to see some message at the beginning of each session, we can do it.
+      Just edit the .bashrc file and at the end of the file add the following command:
+      
+      echo "Welcome to the terminal. Hope you are doing great!"
+      
+Save the file. Close the terminal and reopen it. The message will be echoed at the top of the terminal.
