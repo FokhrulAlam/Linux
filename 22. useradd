@@ -1,0 +1,26 @@
+useradd command is used to create users
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sudo useradd hasina -m -s /bin/bash -g users -c "first user"
+                                ;sudo is used. Because, to create a user, we must have root permission
+                                ;hasina is the name of the user
+                                ;-m is used for creating a default home directory for the user
+                                ;-s is used for default shell
+                                ;/bin/bash is the default shell for the user here
+                                ;-g is used to assign default group
+                                ;users is the default group
+                                ;-c is used for writing any comment
+                                ;"first user" is our comment
+
+[sudo] password for fokhrul:    ;After pressing enter, the terminal asks for the password
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls /home      ;Showing two users
+fokhrul  hasina
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sudo passwd hasina    ;Setting up a password for hasina
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+
+
+
