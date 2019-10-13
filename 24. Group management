@@ -1,0 +1,28 @@
+We will learn about groups, groupadd, groupdel commands.
+
+
+fokhrul@fokhrul-VirtualBox:~$ groups      ;shows all the groups I am connected to
+fokhrul adm cdrom sudo dip plugdev lpadmin sambashare     ;In this line, fokhrul is also a group
+
+fokhrul@fokhrul-VirtualBox:~$ cat /etc/group    ;reading the group folder for all the groups
+                                                ;This command showed a lot of things. I just pasted here a few lines.
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,fokhrul      ;fokhrul is connected to adm
+
+fokhrul@fokhrul-VirtualBox:~$ sudo groupadd Nodejs      ;Adding a new group named Nodejs
+[sudo] password for fokhrul:                            ;I did not still link my username to this group
+
+fokhrul@fokhrul-VirtualBox:~$ sudo groupadd Java
+fokhrul@fokhrul-VirtualBox:~$ sudo groupadd Python
+
+fokhrul@fokhrul-VirtualBox:~$ sudo groupdel Java        ;Deleting the group Java
+
+fokhrul@fokhrul-VirtualBox:~$ sudo gpasswd -a fokhrul Python    ;Adding fokhrul(my username) to Python group.
+                                                                ; -a is used to add users to groups
+Adding user fokhrul to group Python
+
+fokhrul@fokhrul-VirtualBox:~$ sudo gpasswd -d fokhrul Python    ; -d is used to remove users from a group
+Removing user fokhrul from group Python
