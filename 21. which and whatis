@@ -1,0 +1,25 @@
+# which command is used to give the path of something.
+# whatis command gives the short description of a command in the manual page
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ which ls      ;showing the location of ls command
+/bin/ls
+fokhrul@fokhrul-VirtualBox:~/Desktop$ which bash    ;showing location of bash
+/bin/bash
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano script1.sh       ;#!/bin/bash
+                                                            ;/bin/ls
+                                                            ;STRING="Hello world"
+                                                            ;echo $STRING
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./script1.sh      ;Executing the script
+file.txt  folder1  script1.sh
+Hello world
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ which firefox     ;Showing location of firefox
+/usr/bin/firefox
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ whatis ls         ;Providing a short description of ls
+ls (1)               - list directory contents
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ whatis firefox
+firefox (1)          - a free and open source web browse...
