@@ -1,0 +1,83 @@
+We will learn about df, du and free command.
+
+df command shows the disk space being used by the file system.
+du commands shows the disk space being used by different directories.
+free command displays the total amount of free, used space, cached etc.
+
+
+
+fokhrul@fokhrul-VirtualBox:~$ df      ;shows the disk spaces being used by different file systems
+
+Filesystem     1K-blocks    Used Available Use% Mounted on
+udev              885964       0    885964   0% /dev
+tmpfs             181964    1556    180408   1% /run
+/dev/sda1       10253588 6142884   3570136  64% /       ;this is the root partition
+tmpfs             909816   13164    896652   2% /dev/shm
+tmpfs               5120       4      5116   1% /run/lock
+tmpfs             909816       0    909816   0% /sys/fs/cgroup
+/dev/loop1         55808   55808         0 100% /snap/core18/1066
+/dev/loop3          4224    4224         0 100% /snap/gnome-calculator/406
+/dev/loop0         91264   91264         0 100% /snap/core/7713
+/dev/loop4          1024    1024         0 100% /snap/gnome-logs/81
+/dev/loop8        153600  153600         0 100% /snap/gnome-3-28-1804/67
+/dev/loop9          3840    3840         0 100% /snap/gnome-system-monitor/100
+/dev/loop5         55808   55808         0 100% /snap/core18/1192
+/dev/loop2        153600  153600         0 100% /snap/gnome-3-28-1804/71
+/dev/loop7         15104   15104         0 100% /snap/gnome-characters/317
+/dev/loop10        91264   91264         0 100% /snap/core/7917
+/dev/loop6          4352    4352         0 100% /snap/gnome-calculator/501
+/dev/loop11        15104   15104         0 100% /snap/gnome-characters/296
+/dev/loop12        43904   43904         0 100% /snap/gtk-common-themes/1313
+/dev/loop13         1024    1024         0 100% /snap/gnome-logs/61
+/dev/loop14        45312   45312         0 100% /snap/gtk-common-themes/1353
+tmpfs             181960      28    181932   1% /run/user/121
+tmpfs             181960      28    181932   1% /run/user/1000
+
+
+fokhrul@fokhrul-VirtualBox:~$ df -h     ; -h flag helps to see the size in GB,MB etc.
+Filesystem      Size  Used Avail Use% Mounted on
+udev            866M     0  866M   0% /dev
+tmpfs           178M  1.6M  177M   1% /run
+/dev/sda1       9.8G  5.9G  3.5G  64% /
+tmpfs           889M   13M  876M   2% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           889M     0  889M   0% /sys/fs/cgroup
+/dev/loop1       55M   55M     0 100% /snap/core18/1066
+/dev/loop3      4.2M  4.2M     0 100% /snap/gnome-calculator/406
+/dev/loop0       90M   90M     0 100% /snap/core/7713
+/dev/loop4      1.0M  1.0M     0 100% /snap/gnome-logs/81
+/dev/loop8      150M  150M     0 100% /snap/gnome-3-28-1804/67
+/dev/loop9      3.8M  3.8M     0 100% /snap/gnome-system-monitor/100
+/dev/loop5       55M   55M     0 100% /snap/core18/1192
+/dev/loop2      150M  150M     0 100% /snap/gnome-3-28-1804/71
+/dev/loop7       15M   15M     0 100% /snap/gnome-characters/317
+/dev/loop10      90M   90M     0 100% /snap/core/7917
+/dev/loop6      4.3M  4.3M     0 100% /snap/gnome-calculator/501
+/dev/loop11      15M   15M     0 100% /snap/gnome-characters/296
+/dev/loop12      43M   43M     0 100% /snap/gtk-common-themes/1313
+/dev/loop13     1.0M  1.0M     0 100% /snap/gnome-logs/61
+/dev/loop14      45M   45M     0 100% /snap/gtk-common-themes/1353
+tmpfs           178M   28K  178M   1% /run/user/121
+tmpfs           178M   24K  178M   1% /run/user/1000
+
+fokhrul@fokhrul-VirtualBox:~$ cd Downloads
+fokhrul@fokhrul-VirtualBox:~/Downloads$ du -h     ;Now we will see the space used by Downloads directory
+52K	./Wikipedia_files
+4.0K	./test
+188K	.                 ;Downloads directory is using total 188KB of space
+
+fokhrul@fokhrul-VirtualBox:~/Downloads$ cd
+fokhrul@fokhrul-VirtualBox:~$ du -sh        ;-s flag is used to see the summary here
+124M	.           ;My home directory is using total 124MB
+
+
+
+fokhrul@fokhrul-VirtualBox:~$ free
+              total        used        free      shared  buff/cache   available
+Mem:        1819636     1218244      114740       42060      486652      413672
+Swap:        483800        6924      476876
+
+fokhrul@fokhrul-VirtualBox:~$ free -h
+              total        used        free      shared  buff/cache   available
+Mem:           1.7G        1.2G        122M         29M        464M        414M
+Swap:          472M        6.8M        465M
