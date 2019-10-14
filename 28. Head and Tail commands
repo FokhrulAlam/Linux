@@ -1,0 +1,83 @@
+Head is used to print the first 10 lines by default of a file
+Tail is used to print the last 10 lines by default of a file
+We can change the number of lines to be printed
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cd /var/log
+
+fokhrul@fokhrul-VirtualBox:/var/log$ ls       ;lots of files are here
+
+alternatives.log  faillog            syslog
+apport.log        fontconfig.log     syslog.1
+apport.log.1      gdm3               syslog.2.gz
+apt               gpu-manager.log    syslog.3.gz
+auth.log          hp                 syslog.4.gz
+auth.log.1        installer          syslog.5.gz
+bootstrap.log     journal            syslog.6.gz
+btmp              kern.log           syslog.7.gz
+cups              kern.log.1         tallylog
+dist-upgrade      lastlog            unattended-upgrades
+dpkg.log          speech-dispatcher  wtmp
+
+fokhrul@fokhrul-VirtualBox:/var/log$ head apport.log      ;it is empty
+
+fokhrul@fokhrul-VirtualBox:/var/log$ cd
+
+fokhrul@fokhrul-VirtualBox:~$ ls Desktop/
+Bangladesh.txt  file.txt  folder2  script1.sh
+
+fokhrul@fokhrul-VirtualBox:~$ head Desktop/Bangladesh.txt     
+                                                            ;Printing first 10 lines
+The father of an engineering student who was beaten to death at his university halls in Bangladesh has demanded justice for his son, as protests against politically motivated attacks on campuses continued.
+
+Abrar Fahad, 22, who was allegedly targeted after he criticised the government in a Facebook post, was found dead at his university halls of residence in Dhaka on Monday.
+
+It is claimed that he was attacked by students linked to the Bangladesh Chhatra League (BCL), an influential student wing of prime minister Sheikh Hasina’s Awami League.
+
+Barkat Ullah, Fahad’s father, said his son had hoped to study a PhD, and wanted to serve his country. “The university administration has to take strict measures to stop such incidents,” he said. “They should know what’s happening inside their dormitory. They have to hold them accountable.
+A first year student from Bangladesh University of Engineering and Technology (Buet) in Dhaka, where Fahad was studying, said students did not feel safe in halls of residences. “We never speak freely,” he said.
+
+Fahad was in his second year at Buet, the most competitive university in the country, where he was studying electrical and electronic engineering.
+
+
+fokhrul@fokhrul-VirtualBox:~$ tail Desktop/Bangladesh.txt       ;Printing last 10 lines
+
+“Abrar was only exercising his peaceful right to freedom of expression in his Facebook posts criticising the government,” the human rights group said in a statement.
+
+Hasina has promised justice to Fahad’s family. At least 11 students have reportedly been arrested in connection with his murder.
+
+On Wednesday, hundreds of students and teachers took part in a silent procession at Buet. A second student at the university, who also wished to be anonymous, said that the humiliation and beatings of students had been repeatedly ignored by Buet’s leadership.
+
+“The ragging [bullying and beating] has always been a massive problem. For many past incidents, we reported them to authorities. But they never took any serious action. And this was a result of their negligence,” the student said.
+
+“The perpetrators never thought they’d face any consequences,” he added. “It’s a shame that someone has to get killed to bring the issue under spotlight.”
+
+
+fokhrul@fokhrul-VirtualBox:~$ head -n3 Desktop/Bangladesh.txt         ;Showing the first 3 lines
+The father of an engineering student who was beaten to death at his university halls in Bangladesh has demanded justice for his son, as protests against politically motivated attacks on campuses continued.
+
+Abrar Fahad, 22, who was allegedly targeted after he criticised the government in a Facebook post, was found dead at his university halls of residence in Dhaka on Monday.
+
+fokhrul@fokhrul-VirtualBox:~$ tail -n3 Desktop/Bangladesh.txt          ;Showing the last 3 lines
+“The ragging [bullying and beating] has always been a massive problem. For many past incidents, we reported them to authorities. But they never took any serious action. And this was a result of their negligence,” the student said.
+
+“The perpetrators never thought they’d face any consequences,” he added. “It’s a shame that someone has to get killed to bring the issue under spotlight.”
+fokhrul@fokhrul-VirtualBox:~$ 
+
+
+fokhrul@fokhrul-VirtualBox:~$ cd Desktop
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ tail -f Bangladesh.txt      ;-f flag helps to follow changes to Bangladesh.txt. Open a new tab and append some new lines Bangladesh.txt
+                                                                  ;The last 10 lines will now change in the first tab
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ head -n3 Bangladesh.txt file.txt        ;Showing first three lines of two separate files
+==> Bangladesh.txt <==
+The father of an engineering student who was beaten to death at his university halls in Bangladesh has demanded justice for his son, as protests against politically motivated attacks on campuses continued.
+
+Abrar Fahad, 22, who was allegedly targeted after he criticised the government in a Facebook post, was found dead at his university halls of residence in Dhaka on Monday.
+
+==> file.txt <==
+The perpetrators do not care about law.
+Because, none of the criminals of such campus killings have served a jail term before.
+fokhrul@fokhrul-VirtualBox:~/Desktop$ 
+
