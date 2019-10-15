@@ -1,0 +1,42 @@
+date command changes the system's time and date
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date        ;Shows the current system time information
+Mon Oct 14 23:09:50 CDT 2019
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date -s "04/12/2005 05:13:43"       ;changing the system time and date to 2005
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date +%m    ;Specifies the month number
+10
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date +%h    ;Specifies the abbreviated month
+Oct
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date +%B    ;Specifies the full month name
+October
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date +%d    ;Specifies the day of the month
+14
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date +%y    ;Specifies the year
+19
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date +%D    ;Specifies the date
+10/14/19
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date +%T    ;Specifies the time
+23:27:57
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date +%H%M%S  ;Specifies the time
+233046
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date "+%d-%h-%y"    ;See the dash sign
+14-Oct-19
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date "+%d/%h/%y"    ;See the forward slash sign
+14/Oct/19
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date "+DATE: %m/%d/%y%nTIME: %H:%M:%S"    ;Here is a new line character
+DATE: 10/14/19
+TIME: 23:42:37
