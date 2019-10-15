@@ -1,0 +1,26 @@
+apt-get command is used to install software
+apt means advanced packaging tool. It is available for debian based operating system, nor Redhat based. For Redhat, it is yum.
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sudo apt-get update     ;Updating the whole package
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano /etc/apt/sources.list      ;Shows all the packages
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ vlc -version        ;Trying to see if vlc is installed. vlc is not installed
+
+Command 'vlc' not found, but can be installed with:
+
+sudo snap install vlc      # version 3.0.7, or
+sudo apt  install vlc-bin
+
+See 'snap info vlc' for additional versions.
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sudo apt-get install        ;Installing vlc
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sudo apt-get remove vlc     ;Just removing the vlc software
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sudo apt-get remove --purge vlc     ;Removing configuration files of vlc
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sudo apt-get autoremove vlc         ;Some packages were automatically installed while installing vlc. We no longer need them.
+
+
