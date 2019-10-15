@@ -1,0 +1,22 @@
+
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter your name: 
+Md Fokhrul Alam
+Your name is Md Fokhrul Alam
+Enter phone numbers: 
+4848448 334555 56783 3344
+Your phone numbers are 4848448, 334555 and 56783 3344
+Your address: Beaumont,Texas
+Your address is Beaumont,Texas
+Password: 
+Password is 66666
+Enter some names: 
+Mrinal Rahim Karim Anuska
+All Names: Mrinal, Rahim, Karim
+What is love?
+Nisartho Valobasa
+love is Nisartho Valobasa
