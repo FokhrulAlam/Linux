@@ -1,0 +1,32 @@
+find command helps to search for a file
+
+
+fokhrul@fokhrul-VirtualBox:~$ ls
+beaumont.txt  examples.desktop  Pictures   Videos
+Desktop       Music             Public     winter.txt
+Documents     new.txt           Templates
+Downloads     out.txt           test1.txt
+
+fokhrul@fokhrul-VirtualBox:~$ find /home/fokhrul -name test1.txt    ;finding test1.txt in the home directory
+/home/fokhrul/test1.txt
+
+fokhrul@fokhrul-VirtualBox:~$ find /home/fokhrul -name test1.*      ;finding any file starting with test1.
+/home/fokhrul/test1.txt
+
+fokhrul@fokhrul-VirtualBox:~$ find /home/fokhrul -name '*.txt'      ;Showing a bunch of .txt files. Lots of file! I just put a few here
+/home/fokhrul/winter.txt
+/home/fokhrul/new.txt
+/home/fokhrul/beaumont.txt
+
+fokhrul@fokhrul-VirtualBox:~$ find /home/fokhrul -name file*        ;Showing all starting with file
+/home/fokhrul/Desktop/folder2/folder2/file.txt
+/home/fokhrul/Desktop/folder2/folder1/folder2/file.txt
+/home/fokhrul/Desktop/folder2/folder1/file.txt
+/home/fokhrul/Desktop/folder2/file.txt
+/home/fokhrul/Desktop/file.txt
+
+fokhrul@fokhrul-VirtualBox:~$ sudo find / -name file*       ;I ran this command and got baffled by the list of files and folders starting with 'file'
+                                                            ;This command starts finding from the root directory.
+
+fokhrul@fokhrul-VirtualBox:~$ find /home/fokhrul -mtime -1      ;Shows all created one day ago till now
+
