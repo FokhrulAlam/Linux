@@ -1,0 +1,21 @@
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l
+total 12
+-rw-r--r-- 1 fokhrul fokhrul 2899 Oct 13 19:23 Bangladesh.txt
+drwxr-xr-x 5 fokhrul fokhrul 4096 Oct 13 14:05 folder2
+-rwxr-xr-x 1 fokhrul fokhrul   99 Oct 15 08:04 hello.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Hello world
+The location of bash is /bin/bash
+bash version: 4.4.20(1)-release
+/home/fokhrul
+/home/fokhrul/Desktop
+My name is Md Fokhrul Alam
+I graduated in 2019
+
+
+
