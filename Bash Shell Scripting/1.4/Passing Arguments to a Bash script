@@ -1,0 +1,7 @@
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh Bangladesh India Pakistan Srilanka Maldives Bhutan
+Bangladesh India Pakistan Srilanka Maldives Bhutan
+6               ; Total number of arguments is 6
