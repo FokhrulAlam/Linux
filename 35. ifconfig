@@ -1,0 +1,13 @@
+ifconfig means interface configuration
+It is used to configure a network interface
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ifconfig      ;Shows the network interfaces.
+                                                    ; eth means ethernet connection(wired connection)
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ifconfig eth0       ;Shows eth0 interface only
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sudo ifconfig eth0 down     ;eth0 will go down
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sudo ifconfig eth0 up       ;eth0 is up now
+
