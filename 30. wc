@@ -1,0 +1,23 @@
+wc commands means word count
+It will number of characters, words, lines etc in a file
+
+
+fokhrul@fokhrul-VirtualBox:~$ cd Desktop/
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  file.txt  folder2  script1.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ wc Bangladesh.txt       ;29 is the number of line
+  29  458 2899 Bangladesh.txt                                 ;458 is the number of words
+                                                              ;2899 is the number of characters
+                                                              
+fokhrul@fokhrul-VirtualBox:~/Desktop$ wc -c Bangladesh.txt    ;number of characters
+2899 Bangladesh.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ wc -l Bangladesh.txt    ;number of lines
+29 Bangladesh.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ wc -w Bangladesh.txt    ;number of words
+458 Bangladesh.txt 
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ wc -L Bangladesh.txt    ;number of characters in the longest line
+292 Bangladesh.txt
