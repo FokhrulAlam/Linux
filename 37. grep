@@ -1,0 +1,40 @@
+grep, egrep, fgrep
+This command prints lines matching a pattern
+grep command is case-sensitive by default.
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ man tar > manTar.txt      ;creating a new file from the manual page of tar command
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  folder2      folder2.tar.gz  script1.sh
+file.txt        folder2.tar  manTar.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ grep "options" manTar.txt       ;Shows the lines containing the word options
+   
+   arguments  supply  arguments to those options that
+       words that remain after all options has been  pro‐
+       Any  number of options not taking arguments can be
+       ate ambiguity.  Arguments to long options are sup‐
+       or (abbreviating some options):
+       The options in all three styles can be intermixed,
+       although doing so with old options is not  encour‐
+       The options listed in the table below tell GNU tar
+              options.
+              options   and   exit.    No  arguments  are
+              Display  a  list  of  available options and
+              --list or --extract options).
+              options.
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ grep -i "options" manTar.txt      ; Shows bothe uppercase options and lowercase options
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ grep -n "options" manTar.txt      ; -n shows the line number
+87:       arguments  supply  arguments to those options that
+90:       words that remain after all options has been  pro‐
+115:       Any  number of options not taking arguments can be
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ grep -n "do" Bangladesh.txt file.txt manTar.txt       ;Searching for the word "do" in three files
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ grep -n "do" *        ;Finding the word "do" in all the files
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ grep -v "do" Bangladesh.txt     ; v is used to show all the lines that do not have the word "do"
+                                                                      ; v does not mean verbose here. Tricky one!!!!!
