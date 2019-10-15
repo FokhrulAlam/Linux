@@ -1,0 +1,66 @@
+tar command is used to compress and extract files archived in tar format
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  file.txt  folder2  script1.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ tar -cvf folder2.tar folder2      ;We want to compress folder2
+folder2/                                                                ;folder2.tar will be the new name
+folder2/folder2/                                                        ;c used to create archive
+folder2/folder2/file.txt                                                ;v means verbose
+folder2/folder1/                                                        ;f is used to specify the filename
+folder2/folder1/folder2/
+folder2/folder1/folder2/file.txt
+folder2/folder1/folder3/
+folder2/folder1/file.txt
+folder2/folder1/b/
+folder2/folder1/b/c/
+folder2/folder1/b/c/e/
+folder2/folder1/b/c/e/e/
+folder2/file.txt
+folder2/b/
+folder2/b/c/
+folder2/b/c/e/
+folder2/b/c/e/e/
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ rm -r folder2
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  file.txt  folder2.tar  script1.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ tar -xvf folder2.tar      ; x is used to extract
+folder2/
+folder2/folder2/
+folder2/folder2/file.txt
+folder2/folder1/
+folder2/folder1/folder2/
+folder2/folder1/folder2/file.txt
+folder2/folder1/folder3/
+folder2/folder1/file.txt
+folder2/folder1/b/
+folder2/folder1/b/c/
+folder2/folder1/b/c/e/
+folder2/folder1/b/c/e/e/
+folder2/file.txt
+folder2/b/
+folder2/b/c/
+folder2/b/c/e/
+folder2/b/c/e/e/
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  file.txt  folder2  folder2.tar  script1.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ tar -czf folder2.tar.gz folder2       ;Creating tar.gz file from folder2
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls                                    ; z is always used right after c
+Bangladesh.txt  folder2      folder2.tar.gz
+file.txt        folder2.tar  script1.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ rm -r folder2
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  folder2.tar     script1.sh
+file.txt        folder2.tar.gz
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ tar -xzf folder2.tar.gz       ;Extracting from a tar.gz file
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  folder2      folder2.tar.gz
+file.txt        folder2.tar  script1.sh
+
