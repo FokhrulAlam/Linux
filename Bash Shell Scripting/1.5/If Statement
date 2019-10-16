@@ -1,0 +1,47 @@
+
+
+#Integer comparison:
+#-eq means equal to;      -ne means not equal to;               -gt means greater than;           -ge means greater than or equal to
+#-lt means less than;     -le means less than or equal to;      
+#< means less than;       <= means less than or equal to;       > means greater than;          >= means greater than or equal to
+
+
+For <,<=,>,>=  we should use double first bracket.
+
+(( 10 <= 9 ))
+
+
+#String comparison:
+# = means equal to;                 == means equal to;           != means not equal to;          < means less than
+# > means greater than(ASCII alphabetical order);
+# -z means string is null,that is, has zero length
+
+For > and < , we should use double third brackets.
+
+[[ 'Rahim' > "Karim' ]]
+
+
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+condition is false
+Your name is fokhrul
+fokhrul is less than Mrinal
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+condition is false
+Your name is fokhrul
+fokhrul is greataer than Mrinal
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+condition is false
+Your name is fokhrul
+fokhrul is greataer than Mrinal
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+condition is false
+Your name is Mrinal
