@@ -1,0 +1,70 @@
+Some flags used here:
+
+-e ;if true, the file exists
+-f ;if true, it is a regular file
+-d ;if true, it is a directory
+-b ;if true, the file is block-special
+-c ;if true, the file is character-special
+-s ;if true, the file is not empty
+-r ;if true, the file has read permission
+-w ;if tru, the file has write permission
+-x ;if true, the file has execute permission
+
+
+
+
+
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  folder2  hello.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter the name of the file: Bangladesh.txt
+Bangladesh.txt is found
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter the name of the file: file.txt
+file.txt is not found
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter the name of the file: Bangladesh.txt
+Bangladesh.txt is found
+It is a regular file
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  folder2  hello.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter the name of the file: hello.sh
+hello.sh is found
+It is a regular file
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter the name of the file: folder2
+folder2 is found
+It is not a regular file
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter the name of the file: folder2
+folder2 is found
+It is a directory
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l newfile.txt
+-rw-r--r-- 1 fokhrul fokhrul 0 Oct 16 00:26 newfile.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter the name of the file: newfile.txt
+newfile.txt is found
+It is a regular file
+It is an empty file
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter the name of the file: folder2
+folder2 is found
+It is a directory
+It is not empty
+
+
+
+
