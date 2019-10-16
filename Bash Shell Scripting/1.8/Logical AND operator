@@ -1,0 +1,16 @@
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+bash: ./hello.sh: Permission denied
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod +x hello.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Please enter your age: 28
+You are right. Good guy!
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Please enter your age: 10
+Why are you lying?
+
