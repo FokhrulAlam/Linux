@@ -1,0 +1,12 @@
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Please enter the first number: 30
+Please enter the second number: 10
+The sum of 30 and 10 is 40
+The difference between 30 and 10 is  20
+The product of 30 and 10 is  300
+The quotient of 30 and 10 is  3
+The remainder is 0
+
+
