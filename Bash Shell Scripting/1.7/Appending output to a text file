@@ -1,0 +1,42 @@
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+Bangladesh.txt  dahlia.jpg  folder2  hello.sh  newfile.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat newfile.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l newfile.txt
+-rw-r--r-- 1 fokhrul fokhrul 0 Oct 16 00:26 newfile.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod -w newfile.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l newfile.txt
+-r--r--r-- 1 fokhrul fokhrul 0 Oct 16 00:26 newfile.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+bash: ./hello.sh: Permission denied
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod +x hello.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter the file name: newfile.txt
+You do not have write permission
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ chmod +w newfile.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter the file name: newfile.txt
+Type something to append to newfile.txt. Type ctrl+D to quit.
+Hi, if you want to be a pro, practice more and more. Practice everyday.
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat newfile.txt
+Hi, if you want to be a pro, practice more and more. Practice everyday.
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter the file name: newfile.txt
+Type something to append to newfile.txt. Type ctrl+D to quit.
+Thanks.
+Yours truly,
+Md Fokhrul Alam
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat newfile.txt
+Hi, if you want to be a pro, practice more and more. Practice everyday.
+Thanks.
+Yours truly,
+Md Fokhrul Alam
