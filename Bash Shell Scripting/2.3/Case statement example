@@ -1,0 +1,40 @@
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter some characters: a
+User entered a lower case letter
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter some characters: A
+User entered a lower case letter        ;A is not a lower case letter, right? To solve this problem,if it occurs in your computer too, run the following command
+fokhrul@fokhrul-VirtualBox:~/Desktop$ LANG=C      ;LANG=C solves the above problem
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter some characters: A
+User entered an upper case letter         ;Now it is okay
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter some characters: .
+User entered a special character .
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter some characters: 8
+User entered a number in between 0 and 9
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter some characters: dhdjjd
+User entered something useless
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter some characters: .h
+User entered something useless
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Enter some characters: ...
+User entered something useless
+
+
+
+
+
