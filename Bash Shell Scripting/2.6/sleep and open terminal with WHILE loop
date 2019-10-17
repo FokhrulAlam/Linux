@@ -1,0 +1,16 @@
+
+
+#####  Using sleep command-----
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+1
+1
+1
+1
+1
+1
+1
+^C      ;Pressed ctrl+c to end this situation
+
+
