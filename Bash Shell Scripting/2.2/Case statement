@@ -1,0 +1,18 @@
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Unknown vehicle         ; I did not give any argument
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh bicycle
+Rent of bicycle is 150 dollar
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh motor
+Unknown vehicle
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh van
+Rent of van is 80 dollar
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh van bicycle
+Rent of van is 80 dollar            ; The variable vehicle can take only one argument. But we are giving two. So case statement shows van only.
+
