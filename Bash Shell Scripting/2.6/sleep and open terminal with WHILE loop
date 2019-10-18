@@ -1,6 +1,6 @@
 
 
-#####  Using sleep command-----
+#####  Using sleep command-----filename is hello.sh
 
 fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
 fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
@@ -13,4 +13,14 @@ fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
 1
 ^C      ;Pressed ctrl+c to end this situation
 
+
+##### Now we will see how we can open terminals using commands. -----hello1.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello1.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello1.sh
+1
+2
+3
+
+#####Please see the .sh file
 
