@@ -1,0 +1,10 @@
+
+
+------From the file hello_global.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello_global.sh
+Before calling the function: Fokhrul
+Inside the function: Alam
+After calling the function: Alam      ;The value of variable name changed as it is a global variable.
+
+-------From the file hello_local.sh
+
