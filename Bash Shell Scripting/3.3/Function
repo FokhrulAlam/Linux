@@ -1,0 +1,8 @@
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Md Fokhrul Alam
+
+
+####We passed three arguments. They have been printed. We called quit_function which has a command exit. So we are exiting the .sh file.
