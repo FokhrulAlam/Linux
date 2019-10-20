@@ -1,0 +1,27 @@
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+1) fokhrul
+2) mrinal
+3) alam
+#? 2
+mrinal slected
+#? 1
+fokhrul slected
+#? 3
+alam slected
+#? 
+More use of select loop
+1) mrinal
+2) alam
+3) fokhrul
+#? 1
+mrinal is here
+#? 2
+alam is here
+#? 3
+fokhrul here
+#? mrinal
+Error
+#? 1
+mrinal is here
