@@ -1,3 +1,54 @@
 
 
+-----From hello_1.sh file
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello_1.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello_1.sh
+4.4.20(1)-release         ;I just wanted to see the bash version
+Syntax 1
+1
+2
+3
+Syntax 2
+1
+3
+5
+7
+Syntax 3
+0
+1
+2
+3
+4
+
+
+-------From file hello_2.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello_2.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello_2.sh
+------pwd------
+/home/fokhrul/Desktop
+------date------
+Sun Oct 20 14:41:21 CDT 2019
+------ls------
+accessKeys.csv	dahlia.jpg  hello_2.sh	newfile.txt
+Bangladesh.txt	folder2     hello.sh
+
+
+Printing the directory names:
+folder2
+
+Printing the file names:
+accessKeys.csv
+Bangladesh.txt
+dahlia.jpg
+hello_2.sh
+hello.sh
+newfile.txt
+
+
+
+
 
