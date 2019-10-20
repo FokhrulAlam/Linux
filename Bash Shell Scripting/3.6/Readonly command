@@ -1,0 +1,15 @@
+readonly command is used to make the variables or functions read-only so that they can not be changed or overwriteen.
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+./hello.sh: line 6: num1: readonly variable
+value is 10
+Inside the function.
+Value is 10
+./hello.sh: line 21: print: readonly function       ;The function can't be overwritten as it is readonly
+print ()            ;Showing the readonly function
+{ 
+    echo "Inside the function.";
+    echo "Value is $1"
+}
+declare -fr print
