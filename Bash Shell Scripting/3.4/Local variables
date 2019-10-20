@@ -8,3 +8,7 @@ After calling the function: Alam      ;The value of variable name changed as it 
 
 -------From the file hello_local.sh
 
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello_local.sh
+Before calling the function: Fokhrul
+Inside the function: Alam
+After calling the function: Fokhrul
