@@ -1,0 +1,18 @@
+
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano hello.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+###### use of break           ;After 3, nothing will print
+1
+2
+3
+##### use of continue         ; 4 and 8 will not print
+1
+2
+3
+5
+6
+7
+9
+10
