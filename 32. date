@@ -40,3 +40,10 @@ fokhrul@fokhrul-VirtualBox:~/Desktop$ date "+%d/%h/%y"    ;See the forward slash
 fokhrul@fokhrul-VirtualBox:~/Desktop$ date "+DATE: %m/%d/%y%nTIME: %H:%M:%S"    ;Here is a new line character
 DATE: 10/14/19
 TIME: 23:42:37
+
+fokhrul@fokhrul-VirtualBox:~$ date -u     ;Shows the universal time
+Tue Oct 22 11:59:14 UTC 2019
+
+
+
+
