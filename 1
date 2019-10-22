@@ -58,6 +58,36 @@ ls (1)               - list directory contents
 ntfsls (8)           - list directory contents on an NTF...
 vdir (1)             - list directory contents
 
+-----------------------------------Standard Input,Standard Output, Standard Error--------------------------------------
+Standard Input=0
+Standard Ouput=1
+Standard Error=2
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ CAT -K 2>error.txt      ;if there is any error in the command, the error message will be written to the file error.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+accessKeys.csv  dahlia.jpg  file.txt  hello.sh
+Bangladesh.txt  error.txt   folder2   newfile.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat error.txt
+CAT: command not found          ;It was the error message that was supposed to appear on the terminal. But we redirected it to error.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat 1>>file.txt 2>>error.txt
+I am from Bangladesh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ tty     ;Showing the location of the terminal
+/dev/pts/0
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+accessKeys.csv  dahlia.jpg  file.txt  hello.sh
+Bangladesh.txt  error.txt   folder2   newfile.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat error.txt > /dev/pts/2    ;I opened another terminal. Anything from error.txt will appear in that terminal window.
+
+
+
+
+
+
+
 
 
 
