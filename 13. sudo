@@ -243,4 +243,6 @@ fokhrul@fokhrul-VirtualBox:/etc$ sudo -s      ;Takes to the sudo mode
 root@fokhrul-VirtualBox:/etc#         ;Now we are a root user. See # sign at the end and root at the beginning
 
 root@fokhrul-VirtualBox:/etc# mkdir newdir1       ;newdir1 is created. We did not have to use sudo
-root@fokhrul-VirtualBox:/etc# 
+root@fokhrul-VirtualBox:/etc# exit
+exit
+root@fokhrul-VirtualBox:/etc$ 
