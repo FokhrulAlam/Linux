@@ -51,4 +51,26 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 
 fokhrul@fokhrul-VirtualBox:~/Desktop$ cal -y            ;Shows the calendar of the current year
 
+fokhrul@fokhrul-VirtualBox:~$ cal -A 1 11 1971          ;Shows November 1971 and one more month after November
+   November 1971         December 1971      
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+    1  2  3  4  5  6            1  2  3  4  
+ 7  8  9 10 11 12 13   5  6  7  8  9 10 11  
+14 15 16 17 18 19 20  12 13 14 15 16 17 18  
+21 22 23 24 25 26 27  19 20 21 22 23 24 25  
+28 29 30              26 27 28 29 30 31    
+
+fokhrul@fokhrul-VirtualBox:~$ cal -B 2 1 1972               ;Shows January 1972 and two months before January
+   November 1971         December 1971          January 1972      
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+    1  2  3  4  5  6            1  2  3  4                     1  
+ 7  8  9 10 11 12 13   5  6  7  8  9 10 11   2  3  4  5  6  7  8  
+14 15 16 17 18 19 20  12 13 14 15 16 17 18   9 10 11 12 13 14 15  
+21 22 23 24 25 26 27  19 20 21 22 23 24 25  16 17 18 19 20 21 22  
+28 29 30              26 27 28 29 30 31     23 24 25 26 27 28 29  
+                                            30 31          
+fokhrul@fokhrul-VirtualBox:~$ cal -B 2 -A 1 12 1971         ; 2 months before and one month after December
+
+
+
 
