@@ -1,0 +1,65 @@
+Piping passes the output of one command to a different command.
+If we do a redirection in a command, piping is not possible after that. Piping should be done before redirection.
+
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date
+Tue Oct 22 23:20:28 CDT 2019
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date | cut --delimiter " " --fields 4     ;From the output of date command, we are cutting the field 4. Using delimiter, we
+23:20:46                                                                        ;are separating the fields.
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date | cut -d " " -f 2 >file.txt      ;We are writing the output to file.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat file.txt
+Oct                             ;This is the field number 2 of the output of date command
+
+
+------------------------------------------tee command----------------------------------
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+accessKeys.csv  dahlia.jpg  folder2   newfile.txt
+Bangladesh.txt  file.txt    hello.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date
+Wed Oct 23 00:51:15 CDT 2019
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date | tee date.txt | cut -d ' ' -f 1     ;Here we are passing the output of date command to date.txt and cutting some information also.
+Wed
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat date.txt
+Wed Oct 23 00:51:41 CDT 2019
+
+----------------------------------------Xargs command-----------------------------
+xargs command is used for the commands that do not take standard input.
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date
+Wed Oct 23 01:03:20 CDT 2019
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date | echo       ;echo command does not take standarard input like this
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date | xargs echo       ;xargs command helps echo to accept standard input
+Wed Oct 23 01:07:01 CDT 2019
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date | xargs echo 'hello'     ;This time 'hello' will be echoed too
+hello Wed Oct 23 01:08:55 CDT 2019
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ date | cut -d " " -f 1 | xargs echo "The first word before a space: "
+The first word before a space:  Wed
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+accessKeys.csv  dahlia.jpg  file.txt  hello.sh
+Bangladesh.txt  date.txt    folder2   newfile.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat >newfile.txt
+file.txt
+date.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat newfile.txt | xargs rm            ;See the magic!!!!!!
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+accessKeys.csv  Bangladesh.txt  dahlia.jpg  folder2  hello.sh  newfile.txt
+
+
+
+
+
+
+
+
