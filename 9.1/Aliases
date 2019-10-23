@@ -1,0 +1,45 @@
+
+#First, using the text editor, I created a .bash_aliases file in /home/fokhrul. It is a hidden file.
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -a ..          ;Shows the .bash_aliases file
+
+fokhrul@fokhrul-VirtualBox:~$ getdates          ;See the output
+hello there! Wed
+
+fokhrul@fokhrul-VirtualBox:~$ ls              ;fulldate.txt and shortdate.txt are created.
+beaumont.txt  examples.desktop  Pictures       Videos
+desktop       fulldate.txt      Public         winter.txt
+Desktop       Music             shortdate.txt
+Documents     new.txt           Templates
+Downloads     out.txt           test1.txt
+
+fokhrul@fokhrul-VirtualBox:~$ cat fulldate.txt
+Wed Oct 23 02:14:55 CDT 2019
+fokhrul@fokhrul-VirtualBox:~$ cat shortdate.txt
+Wed
+
+fokhrul@fokhrul-VirtualBox:~$ echo '12 1971' | calmagic     ; passing the output of echo to calmagic.
+
+fokhrul@fokhrul-VirtualBox:~$ ls
+beaumont.txt  Downloads         out.txt        test1.txt
+calendar.txt  examples.desktop  Pictures       Videos
+desktop       fulldate.txt      Public         winter.txt
+Desktop       Music             shortdate.txt
+Documents     new.txt           Templates
+
+fokhrul@fokhrul-VirtualBox:~$ cat calendar.txt
+   November 1971         December 1971          January 1972      
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+    1  2  3  4  5  6            1  2  3  4                     1  
+ 7  8  9 10 11 12 13   5  6  7  8  9 10 11   2  3  4  5  6  7  8  
+14 15 16 17 18 19 20  12 13 14 15 16 17 18   9 10 11 12 13 14 15  
+21 22 23 24 25 26 27  19 20 21 22 23 24 25  16 17 18 19 20 21 22  
+28 29 30              26 27 28 29 30 31     23 24 25 26 27 28 29  
+                                            30 31                 
+
+
+
+
+
+
