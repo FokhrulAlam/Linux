@@ -1,0 +1,23 @@
+C:\Users\Me\shellclass>mkdir localusers       ;Creating a project folder
+C:\Users\Me\shellclass>cd localusers
+C:\Users\Me\shellclass\localusers>vagrant init jasonc/centos7       ;Creating the vagrant file
+C:\Users\Me\shellclass\localusers>vagrant up        ;Bringing up the virtual machine. It takes some time.
+C:\Users\Me\shellclass\localusers>vagrant ssh       ;Going inside the virtual machine
+
+[vagrant@localhost ~]$ cd /vagrant      ;Going to /vagrant folder
+[vagrant@localhost vagrant]$ ls -l
+total 4
+-rwxrwxrwx 1 vagrant vagrant 3091 Oct 24 02:27 Vagrantfile      ;Vagrantfile is here
+
+[vagrant@localhost vagrant]$ nano luser-demo01.sh         ;Creating a .sh file
+[vagrant@localhost vagrant]$ chmod 755 luser-demo01.sh    ;Chaning the permissions
+[vagrant@localhost vagrant]$ ls -l luser-demo01.sh
+-rwxr-xr-x 1 vagrant vagrant 104 Oct 24 03:00 luser-demo01.sh
+
+[vagrant@localhost vagrant]$ ./luser-demo01.sh
+Hello!
+script
+$WORD
+This is a shell script
+scripting is a great fun. I love scripting.
+This file was scripted by Fokhrul.
