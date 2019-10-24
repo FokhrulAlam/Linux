@@ -1,0 +1,7 @@
+vagrant init jasonc/centos7          ;creating a vagrant file. jasonc/centos7 is the vagrant box
+
+vagrant up            ;Bring up the virtual machines
+
+vagrant status             ;Check the state of virtual machine
+vagrant ssh       ;Connect to the virtual machine. Type exit to log out
+ping -c 3 "ip address"    ;sending only three packets
