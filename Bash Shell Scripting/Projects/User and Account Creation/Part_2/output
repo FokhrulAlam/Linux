@@ -1,0 +1,11 @@
+
+[vagrant@localhost vagrant]$ ./luser-demo02.sh
+Your UID is 1000
+Your user name is vagrant
+You are not root.
+
+[vagrant@localhost vagrant]$ sudo -s        ; Moving to the root.
+[root@localhost vagrant]# ./luser-demo02.sh
+Your UID is 0
+Your user name is root
+You are root.
