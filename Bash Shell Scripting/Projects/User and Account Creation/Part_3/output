@@ -1,0 +1,17 @@
+$?    is the exit status of the most recently executed command
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./hello.sh
+Your UID is 1000
+Your usernmae is fokhrul
+Your username matches fokhrul
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ echo $?         ;Checking the exit status
+0
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sudo ./hello.sh
+Your UID is 0
+Your UID does not match 1000
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ echo $?
+1
