@@ -1,0 +1,22 @@
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sudo ./hello.sh
+Enter the username: mrinal
+Real name of the user: Alam
+Enter the password: 3rifujd4
+passwd: password expiry information changed.
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ su - mrinal
+Password: 
+You are required to change your password immediately (root enforced)
+Changing password for mrinal.
+(current) UNIX password: 
+Enter new UNIX password: 
+Retype new UNIX password: 
+$ pwd
+/home/mrinal
+$ exit
+fokhrul@fokhrul-VirtualBox:~/Desktop$ 
+
+
+
