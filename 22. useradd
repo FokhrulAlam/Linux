@@ -23,4 +23,15 @@ Retype new UNIX password:
 passwd: password updated successfully
 
 
+##############Few more commands........
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sudo useradd mrinal       ;mrinal is a new user
+[sudo] password for fokhrul: 
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sudo su - mrinal        ;Going to mrinal
+No directory, logging in with HOME=/        ;We did not assign any home directory for mrinal, right?
+$ exit
+fokhrul@fokhrul-VirtualBox:~/Desktop$ 
+
+
+
 
