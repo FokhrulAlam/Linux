@@ -1,0 +1,52 @@
+*     ;multiple places
+?     ;A single place
+[]    ; A single place
+
+
+
+fokhrul@fokhrul-VirtualBox:~$ ls Documents/ Desktop/
+Desktop/:
+fileA.pdf  fileB.pdf  fileC.pdf
+
+Documents/:
+file1.txt  file2.txt  file3.txt
+
+fokhrul@fokhrul-VirtualBox:~$ touch Desktop/file{1..3}.txt
+fokhrul@fokhrul-VirtualBox:~$ ls Desktop
+file1.txt  file3.txt  fileB.pdf
+file2.txt  fileA.pdf  fileC.pdf
+
+fokhrul@fokhrul-VirtualBox:~$ cd Desktop
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls file*
+file1.txt  file3.txt  fileB.pdf
+file2.txt  fileA.pdf  fileC.pdf
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls file{1,2}*
+file1.txt  file2.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ touch A.txt B.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+A.txt  file1.txt  file3.txt  fileB.pdf
+B.txt  file2.txt  fileA.pdf  fileC.pdf
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls ?.txt      : ? allows only one character while * allows unlimited characters
+A.txt  B.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ touch {A..B}{1..2}.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+A1.txt  A.txt   B2.txt  file1.txt  file3.txt  fileB.pdf
+A2.txt  B1.txt  B.txt   file2.txt  fileA.pdf  fileC.pdf
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls ??.txt       ; 
+A1.txt  A2.txt  B1.txt  B2.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls file[1234567890].txt       ;Third bracket means a single place
+file1.txt  file2.txt  file3.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls file[0-9].txt              ;This is a shortcut
+file1.txt  file2.txt  file3.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ touch file{11..13}.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls file[1-9][1-9].txt
+file11.txt  file12.txt  file13.txt
+
+
