@@ -1,0 +1,56 @@
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+A1.txt  B1.txt  file11.txt  file1.txt  fileA.pdf
+A2.txt  B2.txt  file12.txt  file2.txt  fileB.pdf
+A.txt   B.txt   file13.txt  file3.txt  fileC.pdf
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ rm *.{txt,pdf}      ;It is very risky. If we are not careful then we might delete some system files too.
+
+#######Now we will create hundreds of files at one go......
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir project
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cd project
+fokhrul@fokhrul-VirtualBox:~/Desktop/project$ mkdir {jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec}_{2019,2020,2021,2022,2023}
+
+fokhrul@fokhrul-VirtualBox:~/Desktop/project$ ls 
+apr_2019  dec_2019  jan_2019  jun_2019  may_2019  oct_2019
+apr_2020  dec_2020  jan_2020  jun_2020  may_2020  oct_2020
+apr_2021  dec_2021  jan_2021  jun_2021  may_2021  oct_2021
+apr_2022  dec_2022  jan_2022  jun_2022  may_2022  oct_2022
+apr_2023  dec_2023  jan_2023  jun_2023  may_2023  oct_2023
+aug_2019  feb_2019  jul_2019  mar_2019  nov_2019  sep_2019
+aug_2020  feb_2020  jul_2020  mar_2020  nov_2020  sep_2020
+aug_2021  feb_2021  jul_2021  mar_2021  nov_2021  sep_2021
+aug_2022  feb_2022  jul_2022  mar_2022  nov_2022  sep_2022
+aug_2023  feb_2023  jul_2023  mar_2023  nov_2023  sep_2023
+
+        ####We created a lot of folders. Now we will create 100 files in each folder
+
+fokhrul@fokhrul-VirtualBox:~/Desktop/project$ touch {jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec}_{2019,2020,2021,2022,2023}/file{1..100}
+
+fokhrul@fokhrul-VirtualBox:~/Desktop/project$ ls jan_2019
+file1    file22  file36  file5   file63  file77  file90
+file10   file23  file37  file50  file64  file78  file91
+file100  file24  file38  file51  file65  file79  file92
+file11   file25  file39  file52  file66  file8   file93
+file12   file26  file4   file53  file67  file80  file94
+file13   file27  file40  file54  file68  file81  file95
+file14   file28  file41  file55  file69  file82  file96
+file15   file29  file42  file56  file7   file83  file97
+file16   file3   file43  file57  file70  file84  file98
+file17   file30  file44  file58  file71  file85  file99
+file18   file31  file45  file59  file72  file86
+file19   file32  file46  file6   file73  file87
+file2    file33  file47  file60  file74  file88
+file20   file34  file48  file61  file75  file89
+file21   file35  file49  file62  file76  file9
+
+fokhrul@fokhrul-VirtualBox:~/Desktop/project$ rm  {jan,feb,mar}_{2019..2023}/file{1..10}
+
+fokhrul@fokhrul-VirtualBox:~/Desktop/project$ cd ..
+fokhrul@fokhrul-VirtualBox:~/Desktop$ rm -r project         ;Deleting the whole project directory
+
+
+
+
+
