@@ -1,0 +1,55 @@
+
+
+fokhrul@fokhrul-VirtualBox:~$ locate *.conf     ;Showing locations of HUNDRED OF files ending with .conf
+/etc/adduser.conf
+/etc/apg.conf
+/etc/appstream.conf
+/etc/brltty.conf
+/etc/ca-certificates.conf
+
+fokhrul@fokhrul-VirtualBox:~$ locate *.CONF     ;showing nothing. Because linux is case-sensitive. there is nothing ending with .CONF
+
+fokhrul@fokhrul-VirtualBox:~$ locate -i *.CONF        ; -i option makes it non-case-sensitive.
+/etc/adduser.conf
+/etc/apg.conf
+/etc/appstream.conf
+/etc/brltty.conf
+/etc/ca-certificates.conf
+
+fokhrul@fokhrul-VirtualBox:~$ locate -l 2 *.conf      ;We are limiting the number to 2.
+/etc/adduser.conf
+/etc/apg.conf
+
+fokhrul@fokhrul-VirtualBox:~$ locate -e *.conf          ;Locate command databe updates once a day. All new changes will be updated the next day.
+/var/lib/NetworkManager/NetworkManager-intern.conf      ; -e option helps to tackle this situation. -e checks if the file exists right now and then
+/var/lib/NetworkManager/dhclient-enp0s3.conf            ; shows the files if they exist right now. One important thing: The existing files are those 
+/var/lib/ucf/cache/:etc:rsyslog.d:50-default.conf       ; those files that have been updated to the database. Then even if we delete them, until the
+                                                        ;next update, they will show up in the database.
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ locate -S       ;Showing a brief description of the database
+Database /var/lib/mlocate/mlocate.db:
+	23,904 directories
+	235,837 files
+	14,600,446 bytes in file names
+	5,839,628 bytes used to store database
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ touch findme.txt    ;Even though we created the file, as the database is not updated yet, locate command
+fokhrul@fokhrul-VirtualBox:~/Desktop$ locate findme.txt   ; can not locate it.
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sudo updatedb       ;We are updating the database manually.
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ locate findme.txt     ;Now locate command can find the file
+/home/fokhrul/Desktop/findme.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ locate -S         ;Now the database information changed.
+Database /var/lib/mlocate/mlocate.db:
+	23,904 directories
+	235,838 files             ;Number of files changed
+	14,600,460 bytes in file names          ;Amount of space used changed
+	5,839,642 bytes used to store database
+
+
+
+
+
+
