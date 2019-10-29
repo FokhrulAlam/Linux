@@ -1,4 +1,9 @@
 nano gives a text editor where we can create different types of files such as .txt, .py, .cpp etc
+######Some shortcuts:
+Ctrl+Shift+dash=Go to a line
+Alt+U = Undo
+Alt+E = Redo
+Alt+6 = Copy
 
 
 fokhrul@fokhrul-VirtualBox:~$ cd Desktop/
