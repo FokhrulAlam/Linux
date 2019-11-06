@@ -1,0 +1,26 @@
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir project
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir project/folder{1..500}
+fokhrul@fokhrul-VirtualBox:~/Desktop$ touch project/folder{1..500}/file{1..100}
+fokhrul@fokhrul-VirtualBox:~/Desktop$ touch project/folder$(shuf -i 1-500 -n 1)/Bangladesh.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ find project/ -type f -name 'Bangladesh.txt'
+project/folder106/Bangladesh.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ touch project/folder$(shuf -i 1-500 -n 1)/Beaumont.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ find project/ -type f -name '*.txt'
+project/folder18/Beaumont.txt
+project/folder106/Bangladesh.txt
+
+
+
+
+
+
+
+
+
+
+
+
