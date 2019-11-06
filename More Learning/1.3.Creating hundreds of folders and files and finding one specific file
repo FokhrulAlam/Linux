@@ -13,6 +13,10 @@ fokhrul@fokhrul-VirtualBox:~/Desktop$ find project/ -type f -name '*.txt'
 project/folder18/Beaumont.txt
 project/folder106/Bangladesh.txt
 
+fokhrul@fokhrul-VirtualBox:~/Desktop$ find project/ -type f -name '*.txt' -exec mv {} ~/newfolder \;
+
+
+
 
 
 
