@@ -30,3 +30,77 @@ fokhrul@fokhrul-VirtualBox:~$ sudo find / -name file*       ;I ran this command 
 
 fokhrul@fokhrul-VirtualBox:~$ find /home/fokhrul -mtime -1      ;Shows all created one day ago till now
 
+fokhrul@fokhrul-VirtualBox:~/Desktop$ find      ;Showing all folders and files of Desktop directory
+.
+./level2
+./level2/level3
+./level2/level3/level4
+./level2/level3/level4/4.txt
+./level2/level3/level4/level5
+./level2/level3/level4/level5/5.txt
+./level2/level3/3.txt
+./level2/2.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ find . -maxdepth 1      ; . means current folder
+.
+./level2
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ find . -maxdepth 2
+.
+./level2
+./level2/level3
+./level2/2.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ find . -type f      ;Shows only files
+./level2/level3/level4/4.txt
+./level2/level3/level4/level5/5.txt
+./level2/level3/3.txt
+./level2/2.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ find . -type d      ;shows only directories
+.
+./level2
+./level2/level3
+./level2/level3/level4
+./level2/level3/level4/level5
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ find . -maxdepth 3 -type f      ;Combining maxdepth and type
+./level2/level3/3.txt
+./level2/2.txt
+
+fokhrul@fokhrul-VirtualBox:~$ find -maxdepth 3 -name '*txt'           ;Combining -maxdepth and -name together
+./Desktop/level2/2.txt
+
+fokhrul@fokhrul-VirtualBox:~$ find . -maxdepth 4 -iname '?.TXT'       ;Finding in a case-insensitive way
+./Desktop/level2/level3/3.txt
+./Desktop/level2/2.txt
+
+fokhrul@fokhrul-VirtualBox:~$ find / -type f -size +100k          ;Shows every file greater than 100kb starting from the root directory
+
+fokhrul@fokhrul-VirtualBox:~$ sudo find / -type f -size +100k | wc -l       ;Total lines counting
+find: ‘/run/user/1000/gvfs’: Permission denied
+find: ‘/proc/3809/task/3809/fdinfo/6’: No such file or directory
+find: ‘/proc/3809/fdinfo/5’: No such file or directory
+4808
+
+fokhrul@fokhrul-VirtualBox:~$ sudo find / -type f -size +100k -size -5M | wc -l         ;files greater than 100kB and less than 5MB
+find: ‘/run/user/1000/gvfs’: Permission denied
+find: ‘/proc/3823/task/3823/fdinfo/6’: No such file or directory
+find: ‘/proc/3823/fdinfo/5’: No such file or directory
+4638
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
