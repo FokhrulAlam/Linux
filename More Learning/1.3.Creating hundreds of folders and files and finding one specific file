@@ -1,10 +1,14 @@
 
 
-fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir project
-fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir project/folder{1..500}
-fokhrul@fokhrul-VirtualBox:~/Desktop$ touch project/folder{1..500}/file{1..100}
-fokhrul@fokhrul-VirtualBox:~/Desktop$ touch project/folder$(shuf -i 1-500 -n 1)/Bangladesh.txt
-fokhrul@fokhrul-VirtualBox:~/Desktop$ find project/ -type f -name 'Bangladesh.txt'
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir project       ;Creating project directory
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ mkdir project/folder{1..500}      ;Creating 500 folders in project directory
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ touch project/folder{1..500}/file{1..100}.txt       ;Creating 100 files in each folder
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ touch project/folder$(shuf -i 1-500 -n 1)/Bangladesh.txt      ;Creating Bangladesh.txt in a random folder
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ find project/ -type f -name 'Bangladesh.txt'      ;Finding that Bangladesh.txt file
 project/folder106/Bangladesh.txt
 
 fokhrul@fokhrul-VirtualBox:~/Desktop$ touch project/folder$(shuf -i 1-500 -n 1)/Beaumont.txt
@@ -13,18 +17,9 @@ fokhrul@fokhrul-VirtualBox:~/Desktop$ find project/ -type f -name '*.txt'
 project/folder18/Beaumont.txt
 project/folder106/Bangladesh.txt
 
-fokhrul@fokhrul-VirtualBox:~/Desktop$ find project/ -type f -name '*.txt' -exec mv {} ~/newfolder \;
+fokhrul@fokhrul-VirtualBox:~/Desktop$ find project/ -type f -name '*.txt' -exec mv {} ~/newfolder \;      ;Moving the files to a folder in desktop
 
-
-
-
-
-
-
-
-
-
-
+fokhrul@fokhrul-VirtualBox:~/Desktop$ find newfolder/ -type f -iname 'Bangladesh.txt' -exec mv {} project/folder$(shuf -i 1-500 -n 1) \;      ;Again moving Bangladesh.txt to a random folder in project directory
 
 
 
