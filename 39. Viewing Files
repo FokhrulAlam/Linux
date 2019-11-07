@@ -1,0 +1,54 @@
+
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ echo "abc" >>mrinal.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ echo "def" >>mrinal.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+all.txt         file1.txt  file3.txt  file5.txt
+everything.txt  file2.txt  file4.txt  mrinal.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat mrinal.txt
+abc
+def
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ tac mrinal.txt      ;Reading the contents in reverse order
+def
+abc
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat file[1-5].txt | tac
+people
+beautiful
+you
+there
+hello
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat file{1..5}.txt | tac >reverse.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+all.txt         file2.txt  file5.txt
+everything.txt  file3.txt  mrinal.txt
+file1.txt       file4.txt  reverse.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat reverse.txt
+people
+beautiful
+you
+there
+hello
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat reverse.txt | rev         ;Using rev command. rev command reverses the line
+elpoep
+lufituaeb
+uoy
+ereht
+olleh
+
+
+
+
+
+
+
+
+
+
