@@ -1,0 +1,208 @@
+
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+words.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat words.txt
+mrinal
+fokhrul
+alam
+Bangladesh
+beaumont
+Dhaka
+Newyork
+Zoology
+Cardiology
+Houston
+Geography
+Equation
+X-ray
+Unionism
+Primary
+Shakib Al Hasan
+Md Ashraful
+Maulana Bhasani
+Sheikh Mujibur Rahman
+Chapainawabganj
+Hydrogen
+Kansas
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sort words.txt        ;sorting the data in alphabetical order
+alam
+Bangladesh
+beaumont
+Cardiology
+Chapainawabganj
+Dhaka
+Equation
+fokhrul
+Geography
+Houston
+Hydrogen
+Kansas
+Maulana Bhasani
+Md Ashraful
+mrinal
+Newyork
+Primary
+Shakib Al Hasan
+Sheikh Mujibur Rahman
+Unionism
+X-ray
+Zoology
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sort words.txt | tac      ;sort and tac combination
+Zoology
+X-ray
+Unionism
+Sheikh Mujibur Rahman
+Shakib Al Hasan
+Primary
+Newyork
+mrinal
+Md Ashraful
+Maulana Bhasani
+Kansas
+Hydrogen
+Houston
+Geography
+fokhrul
+Equation
+Dhaka
+Chapainawabganj
+Cardiology
+beaumont
+Bangladesh
+alam
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sort -r words.txt       ;Using -r option instead of piping the output to tac command
+Zoology
+X-ray
+Unionism
+Sheikh Mujibur Rahman
+Shakib Al Hasan
+Primary
+Newyork
+mrinal
+Md Ashraful
+Maulana Bhasani
+Kansas
+Hydrogen
+Houston
+Geography
+fokhrul
+Equation
+Dhaka
+Chapainawabganj
+Cardiology
+beaumont
+Bangladesh
+alam
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ shuf -i 1-10000 -n 100 | cat > numbers.txt   ; Creating 100 random numbers
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sort -n numbers.txt | less      ; sorting the numbers based on their numerical valuue in ascending order
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sort -n numbers.txt | tac | less      ;Now reading the sorted numbers in descending order
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sort -nr numbers.txt |  less      ;Another way to reverse the numbers
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cat >repeated_numbers.txt
+4
+5
+2
+0
+11
+4
+2
+0
+44
+5
+55
+12
+89
+65
+65
+11
+11
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sort repeated_numbers.txt
+0
+0
+11
+11
+11
+12
+2
+2
+4
+4
+44
+5
+5
+55
+65
+65
+89
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sort -u repeated_numbers.txt        ;Showing a specific number only once
+0
+11
+12
+2
+4
+44
+5
+55
+65
+89
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l /etc | head -n 7
+total 1068
+drwxr-xr-x  3 root root    4096 Aug  5 14:04 acpi
+-rw-r--r--  1 root root    3028 Aug  5 13:58 adduser.conf
+drwxr-xr-x  2 root root    4096 Nov  6 18:56 alternatives
+-rw-r--r--  1 root root     401 May 29  2017 anacrontab
+-rw-r--r--  1 root root     433 Oct  1  2017 apg.conf
+drwxr-xr-x  6 root root    4096 Aug  5 14:00 apm
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l /etc | head -n 7 | sort -k 5n     ; We want to see the first 7 files based on their size in ascending order
+total 1068
+-rw-r--r--  1 root root     401 May 29  2017 anacrontab
+-rw-r--r--  1 root root     433 Oct  1  2017 apg.conf
+-rw-r--r--  1 root root    3028 Aug  5 13:58 adduser.conf
+drwxr-xr-x  2 root root    4096 Nov  6 18:56 alternatives
+drwxr-xr-x  3 root root    4096 Aug  5 14:04 acpi
+drwxr-xr-x  6 root root    4096 Aug  5 14:00 apm
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l /etc | head -n 7 | sort -k 9        ;Sorting them based on their names. Their names lie in column number 9.
+total 1068
+drwxr-xr-x  3 root root    4096 Aug  5 14:04 acpi
+-rw-r--r--  1 root root    3028 Aug  5 13:58 adduser.conf
+drwxr-xr-x  2 root root    4096 Nov  6 18:56 alternatives
+-rw-r--r--  1 root root     401 May 29  2017 anacrontab
+-rw-r--r--  1 root root     433 Oct  1  2017 apg.conf
+drwxr-xr-x  6 root root    4096 Aug  5 14:00 apm
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -lh /etc | head -n 7 | sort -k 5h     ; Sorting them numerically in human readable format. We can not use h and n together.
+total 1.1M
+-rw-r--r--  1 root root    401 May 29  2017 anacrontab
+-rw-r--r--  1 root root    433 Oct  1  2017 apg.conf
+-rw-r--r--  1 root root   3.0K Aug  5 13:58 adduser.conf
+drwxr-xr-x  2 root root   4.0K Nov  6 18:56 alternatives
+drwxr-xr-x  3 root root   4.0K Aug  5 14:04 acpi
+drwxr-xr-x  6 root root   4.0K Aug  5 14:00 apm
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -lh /etc | head -n 7 | sort -k 6M   :Sorting them based on month
+total 1.1M
+-rw-r--r--  1 root root    401 May 29  2017 anacrontab
+drwxr-xr-x  3 root root   4.0K Aug  5 14:04 acpi
+drwxr-xr-x  6 root root   4.0K Aug  5 14:00 apm
+-rw-r--r--  1 root root   3.0K Aug  5 13:58 adduser.conf
+-rw-r--r--  1 root root    433 Oct  1  2017 apg.conf
+drwxr-xr-x  2 root root   4.0K Nov  6 18:56 alternatives
+
+
+
+
+
