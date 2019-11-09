@@ -43,6 +43,13 @@ uoy
 ereht
 olleh
 
+fokhrul@fokhrul-VirtualBox:~/Desktop$ find -type f | head -n 3 | tail -n 1
+./file2.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ find -type f | head -n 3
+./mrinal.txt
+./file1.txt
+./file2.txt
 
 
 
