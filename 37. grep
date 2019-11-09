@@ -38,3 +38,8 @@ fokhrul@fokhrul-VirtualBox:~/Desktop$ grep -n "do" *        ;Finding the word "d
 
 fokhrul@fokhrul-VirtualBox:~/Desktop$ grep -v "do" Bangladesh.txt     ; v is used to show all the lines that do not have the word "do"
                                                                       ; v does not mean verbose here. Tricky one!!!!!
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ grep -c 'do' Bangladesh.txt        ;Shows total number of lines containg the word 'do'
+
+
+
