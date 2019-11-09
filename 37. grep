@@ -41,5 +41,30 @@ fokhrul@fokhrul-VirtualBox:~/Desktop$ grep -v "do" Bangladesh.txt     ; v is use
 
 fokhrul@fokhrul-VirtualBox:~/Desktop$ grep -c 'do' Bangladesh.txt        ;Shows total number of lines containg the word 'do'
 
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l
+total 8
+drwxr-xr-x 2 fokhrul fokhrul 4096 Nov  9 02:53 folder
+-rw-r--r-- 1 fokhrul fokhrul  221 Nov  8 22:35 sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -lF          ;-F option adds a / after the directory name
+total 8
+drwxr-xr-x 2 fokhrul fokhrul 4096 Nov  9 02:53 folder/
+-rw-r--r-- 1 fokhrul fokhrul  221 Nov  8 22:35 sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -lF | grep -v /
+total 8
+-rw-r--r-- 1 fokhrul fokhrul  221 Nov  8 22:35 sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ man -k print          ;Shows everything containing print in the manual page
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ man -k print | grep files
+cat (1)              - concatenate files and print on th...
+cups-genppdupdate (8) - update CUPS+Gutenprint PPD files
+lp (1)               - print files
+lpr (1)              - print files
+ntfscat (8)          - print NTFS files and streams on t...
+pr (1)               - convert text files for printing
+tac (1)              - concatenate and print files in re...
+
 
 
