@@ -1,0 +1,124 @@
+tar command is used to make an archive and extract files archived in tar format
+gzip and bzip2 are used to compress the archives
+
+We will perform a two-step process:
+      1) Making a tarball           2) Compressing the tarball
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -lh
+total 12K
+-rw-r--r-- 1 fokhrul fokhrul  30 Nov 10 21:19 file1.txt
+-rw-r--r-- 1 fokhrul fokhrul  33 Nov 10 21:20 file2.txt
+-rw-r--r-- 1 fokhrul fokhrul 221 Nov  8 22:35 sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ tar -cvf ourarchive.tar file[1-2].txt sorted.txt
+file1.txt
+file2.txt
+sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+file1.txt  file2.txt  ourarchive.tar  sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l | grep .tar
+-rw-r--r-- 1 fokhrul fokhrul 10240 Nov 10 21:24 ourarchive.tar
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ file ourarchive.tar       ;Showing what type of a file it is
+ourarchive.tar: POSIX tar archive (GNU)
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ tar -tf ourarchive.tar      ; t shows the contents of the archive
+file1.txt                                                         ; f is used to pass a file to tar command
+file2.txt
+sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ rm *txt       
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ tar -xvf ourarchive.tar       ;Extracting the files out of the archive
+file1.txt
+file2.txt
+sorted.txt
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls          ;The files reappeared
+file1.txt  file2.txt  ourarchive.tar  sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ gzip ourarchive.tar       ;Compressing the archive
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls            ; We got a comrpessed archive
+file1.txt  file2.txt  ourarchive.tar.gz  sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ file ourarchive.tar.gz      ;We are seeing the ftype of our archive
+ourarchive.tar.gz: gzip compressed data, was "ourarchive.tar", last modified: Mon Nov 11 03:24:40 2019, from Unix
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l | grep .gz        ;The size of our compressed archive is only 400 bytes
+-rw-r--r-- 1 fokhrul fokhrul 400 Nov 10 21:24 ourarchive.tar.gz
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ gunzip ourarchive.tar.gz        ;We are uncompressing the archive
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l       ;the size of our archive increased
+total 24
+-rw-r--r-- 1 fokhrul fokhrul    30 Nov 10 21:19 file1.txt
+-rw-r--r-- 1 fokhrul fokhrul    33 Nov 10 21:20 file2.txt
+-rw-r--r-- 1 fokhrul fokhrul 10240 Nov 10 21:24 ourarchive.tar
+-rw-r--r-- 1 fokhrul fokhrul   221 Nov  8 22:35 sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ bzip2 ourarchive.tar        ;Now compressing the archive with bzip2
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+file1.txt  file2.txt  ourarchive.tar.bz2  sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ file ourarchive.tar.bz2
+ourarchive.tar.bz2: bzip2 compressed data, block size = 900k
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls -l ourarchive.tar.bz2      ;It is slightly heavier than it was while using gzip command
+-rw-r--r-- 1 fokhrul fokhrul 410 Nov 10 21:24 ourarchive.tar.bz2
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ bunzip2 ourarchive.tar.bz2        ;Uncompressing the compressed archive
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+file1.txt  file2.txt  ourarchive.tar  sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ zip window.zip *txt         ;We are creating a zip file for other operating systems such as windows
+  adding: file1.txt (stored 0%)
+  adding: file2.txt (stored 0%)
+  adding: sorted.txt (deflated 22%)
+  
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls    ;We got our zip file
+file1.txt  ourarchive.tar  window.zip
+file2.txt  sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ file window.zip       ;This is a zip file
+window.zip: Zip archive data, at least v1.0 to extract
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ unzip window.zip        ;We are uncompressing the zip file
+Archive:  window.zip
+replace file1.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+ extracting: file1.txt               
+replace file2.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+ extracting: file2.txt               
+replace sorted.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: sorted.txt        
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ rm ourarchive.tar window.zip
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+file1.txt  file2.txt  sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ tar -cvzf ourarchive.tar.gz *.txt       ; Concurrently, we are making an archive and compressing it with gzip.
+file1.txt                                                                     ; z is used for gzip
+file2.txt
+sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+file1.txt  file2.txt  ourarchive.tar.gz  sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ tar -cvjf ourarchive.tar.bz2 *.txt      ; j means we are using bzip2 algorithm
+file1.txt
+file2.txt
+sorted.txt
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+file1.txt  ourarchive.tar.bz2  sorted.txt
+file2.txt  ourarchive.tar.gz
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ tar -xzf ourarchive.tar.gz        ;We are extracting the files 
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls
+file1.txt  ourarchive.tar.bz2  sorted.txt
+file2.txt  ourarchive.tar.gz
+
+
