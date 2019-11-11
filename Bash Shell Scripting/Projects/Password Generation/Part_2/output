@@ -1,0 +1,36 @@
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano password.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./password.sh
+You executed this command: ./password.sh
+You used . as the path to the password.sh script.
+You supplied 0 arguments on the command line.
+Usage: ./password.sh USER_NAME [USER_NAME]...
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ /home/fokhrul/Desktop/password.sh
+You executed this command: /home/fokhrul/Desktop/password.sh
+You used /home/fokhrul/Desktop as the path to the password.sh script.
+You supplied 0 arguments on the command line.
+Usage: /home/fokhrul/Desktop/password.sh USER_NAME [USER_NAME]...
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./password.sh mrinal
+You executed this command: ./password.sh
+You used . as the path to the password.sh script.
+You supplied 1 arguments on the command line.
+mrinal: 5253fe43ef0ea9617bfc627aaed01b5bf933f82bb150dd51
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./password.sh mrinal mousumi rahima minhaz
+You executed this command: ./password.sh
+You used . as the path to the password.sh script.
+You supplied 4 arguments on the command line.
+mrinal: f50e881e93faf1141c539820645949c7e15670c6f55c7683
+mousumi: baa83be1cfef6a887b6561465e1a75a75dad73c94cabf8cb
+rahima: 71d3ae5515b00b5eb2a94c6f91174f3bc4880c549e861961
+minhaz: 73b67491a902befd92438aa52a6898a7def51fd0678d4457
+
+
+
+
+
+
