@@ -1,0 +1,13 @@
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls      ;We already created our script
+our_script.sh
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./our_script.sh       ;Running the script
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls     
+logfile.txt  our_script.sh  project
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls project | wc -l        ;We created 100 files in the project directory
+100
+
+
+
