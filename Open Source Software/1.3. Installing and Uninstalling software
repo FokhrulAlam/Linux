@@ -1,0 +1,60 @@
+
+
+Suppose I want to install a new program called "xeyes". xeyes is a demo program in which a pair of eyes track the pointer
+
+fokhrul@fokhrul-VirtualBox:~$ apt-cache search xeyes          ;First, we need to know which package contains xeyes program
+x11-apps - X applications
+xfce4-eyes-plugin - eyes that follow your mouse for the Xfce4 panel
+
+fokhrul@fokhrul-VirtualBox:~$ apt-cache show x11-apps | less      ;We want to see the information of x11-apps package
+
+fokhrul@fokhrul-VirtualBox:~$ sudo apt-get install x11-apps     ;Installing x11-apps. Here, we are using 'get' instead of 'cache' as we want data from internet
+
+fokhrul@fokhrul-VirtualBox:~$ xeyes       ;Now run this command and see the magic
+
+#################### We want to download source code now ####################
+
+fokhrul@fokhrul-VirtualBox:~$ sudo nano /etc/apt/sources.list       ;We will edit this file. We will activate the downloading of source code by removing
+                                                                    ; # sign from in front of any line starting with #deb-src
+
+fokhrul@fokhrul-VirtualBox:~$ sudo apt-get update       ;We need to update the cache
+
+fokhrul@fokhrul-VirtualBox:~$ sudo apt-get install dpkg-dev       ;Before installing the source code, we need to install the dpkg-dev package first
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ sudo apt-get source x11-apps        ;Downloading the source code of x11-apps program
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ls          ;These are the files I downloaded
+x11-apps-7.7+6ubuntu1      x11-apps_7.7+6ubuntu1.tar.gz
+x11-apps_7.7+6ubuntu1.dsc
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cd x11-apps-7.7+6ubuntu1/
+fokhrul@fokhrul-VirtualBox:~/Desktop/x11-apps-7.7+6ubuntu1$ ls
+bitmap  rendercheck  xcalc       xcursorgen  xgc    xman
+debian  transset     xclipboard  xditview    xload  xmore
+ico     x11perf      xclock      xedit       xlogo  xwd
+oclock  xbiff        xconsole    xeyes       xmag   xwud
+
+fokhrul@fokhrul-VirtualBox:~/Desktop/x11-apps-7.7+6ubuntu1$ cd xeyes      ;Going to xeyes directory
+
+fokhrul@fokhrul-VirtualBox:~/Desktop/x11-apps-7.7+6ubuntu1/xeyes$ ls
+aclocal.m4    configure.ac  eyesmask.bit  missing
+ChangeLog     COPYING       EyesP.h       README
+config.guess  depcomp       INSTALL       transform.c
+config.h.in   eyes.bit      install-sh    transform.h
+config.sub    Eyes.c        Makefile.am   xeyes.c
+configure     Eyes.h        Makefile.in   xeyes.man
+
+##################### Now we will uninstall packages, software etc ###############3
+fokhrul@fokhrul-VirtualBox:~$ sudo apt-get purge x11-apps       ;Removing x11-apps and its configuration files
+
+fokhrul@fokhrul-VirtualBox:~$ sudo apt-get autoremove       ;Removing any unnecessary dependencies downloaded while installing a package
+
+fokhrul@fokhrul-VirtualBox:~$ cd /var/cache/apt/archives      ; this is the archives directory. By removing these files, we can save a lot of space
+
+fokhrul@fokhrul-VirtualBox:/var/cache/apt/archives$ cd ~
+fokhrul@fokhrul-VirtualBox:~$ sudo apt-get clean        ;We are cleaning the archives folder
+
+
+
+
+
