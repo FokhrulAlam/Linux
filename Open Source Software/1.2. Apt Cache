@@ -1,0 +1,37 @@
+
+######We can go to the following address:
+packages.ubuntu.com
+Reference::Ubuntu » Packages » bionic » All Packages
+
+fokhrul@fokhrul-VirtualBox:~$ lsb_release -a      ;Shows the release, codename etc
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04.3 LTS
+Release:	18.04
+Codename:	bionic
+
+fokhrul@fokhrul-VirtualBox:~$ uname -m      ;Shows the architecture of our machine
+x86_64
+
+
+In that webpage, we can see a single package depends on many other package. Installing them one by one
+would cost us a whole life. So we can use different cli commands to avoid this hassle.
+
+####################################
+          Suppose we want to search for the file relevant to docx.
+fokhrul@fokhrul-VirtualBox:~$ apt-cache search docx
+docx2txt - Convert Microsoft OOXML files to plain text
+libapache-poi-java - Apache POI - Java API for Microsoft Documents
+
+fokhrul@fokhrul-VirtualBox:~$ apt-cache show docx2txt       ;Shows the contents of docx2txt file
+
+fokhrul@fokhrul-VirtualBox:~$ cd /var/lib/apt/lists         ;Going to the location of cache
+
+fokhrul@fokhrul-VirtualBox:/var/lib/apt/lists$ cd ~
+fokhrul@fokhrul-VirtualBox:~$ sudo apt-get update         ;Updating our cache
+
+fokhrul@fokhrul-VirtualBox:~$ sudo apt-get upgrade        ;Updating the outdated software
+
+
+
+
