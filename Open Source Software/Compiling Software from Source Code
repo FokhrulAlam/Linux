@@ -1,0 +1,106 @@
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ uname -o    ;Shows which operating system we are using
+GNU/Linux
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ cd ~/Downloads/
+fokhrul@fokhrul-VirtualBox:~/Downloads$ ls        ;We already downloaded the following file
+coreutils-8.28.tar.xz
+
+fokhrul@fokhrul-VirtualBox:~/Downloads$ file coreutils-8.28.tar.xz      ;It is XZ-compressed
+coreutils-8.28.tar.xz: XZ compressed data
+
+fokhrul@fokhrul-VirtualBox:~/Downloads$ tar -xJf coreutils-8.28.tar.xz    ; J (upper case) is used for xz compressed data. lower-case j for bzip2
+fokhrul@fokhrul-VirtualBox:~/Downloads$ ls
+coreutils-8.28  coreutils-8.28.tar.xz
+
+fokhrul@fokhrul-VirtualBox:~/Downloads$ cd coreutils-8.28/
+
+fokhrul@fokhrul-VirtualBox:~/Downloads/coreutils-8.28$ ls
+ABOUT-NLS       doc           po
+aclocal.m4      gnulib-tests  README
+AUTHORS         GNUmakefile   src
+bootstrap       init.cfg      tests
+bootstrap.conf  INSTALL       THANKS
+build-aux       lib           thanks-gen
+cfg.mk          m4            THANKS.in
+ChangeLog       maint.mk      THANKS-to-translators
+configure       Makefile.am   THANKStt.in
+configure.ac    Makefile.in   TODO
+COPYING         man
+dist-check.mk   NEWS
+
+fokhrul@fokhrul-VirtualBox:~/Downloads/coreutils-8.28$ cd src/      ;We move to src directory
+
+fokhrul@fokhrul-VirtualBox:~/Downloads/coreutils-8.28/src$ ls | grep ls     ;We see some files. We see the ls.c file too, written using C language
+coreutils-arch.c
+coreutils.c
+coreutils-dir.c
+coreutils-vdir.c
+false.c
+ls.c
+ls-dir.c
+ls.h
+ls-ls.c
+ls-vdir.c
+
+######## Now I will edit ls.c file and add the following command to main function of this file. The main function is at line number 1444 #######
+                  printf("Hello. How are you all?\n");
+fokhrul@fokhrul-VirtualBox:~/Downloads/coreutils-8.28/src$ nano ls.c
+
+##### I edited the file. Now to make it work we need a compiler as it is written in C programming language. The compiler is GNU C compiler
+      or the gcc compiler. We will install gcc now ######
+      
+fokhrul@fokhrul-VirtualBox:~/Downloads/coreutils-8.28/src$ sudo apt-get install gcc
+
+fokhrul@fokhrul-VirtualBox:~/Downloads/coreutils-8.28/src$ cd ..
+fokhrul@fokhrul-VirtualBox:~/Downloads/coreutils-8.28$ bash configure     ;We are configuring our machine so that gcc works properly
+
+fokhrul@fokhrul-VirtualBox:~/Downloads/coreutils-8.28$ ls       ;We can see a new file named "Makefile" is created. We will run it now
+ABOUT-NLS       dist-check.mk  NEWS
+aclocal.m4      doc            po
+AUTHORS         gnulib-tests   README
+bootstrap       GNUmakefile    src
+bootstrap.conf  init.cfg       tests
+build-aux       INSTALL        THANKS
+cfg.mk          lib            thanks-gen
+ChangeLog       m4             THANKS.in
+config.log      maint.mk       THANKS-to-translators
+config.status   Makefile       THANKStt.in
+configure       Makefile.am    TODO
+configure.ac    Makefile.in
+COPYING         man
+
+fokhrul@fokhrul-VirtualBox:~/Downloads/coreutils-8.28$ sudo apt-get install make      ;We are installing the "make" command
+
+fokhrul@fokhrul-VirtualBox:~/Downloads/coreutils-8.28$ make       ;We are running the make command. It compiles all files.
+
+fokhrul@fokhrul-VirtualBox:~/Downloads/coreutils-8.28$ sudo make install        ; We are now installing each of the different pieces of software that came with "coreutils-8.28" package
+
+##########Now we will close our terminal and reopen it. ##########
+fokhrul@fokhrul-VirtualBox:~$ ls          ;Now if we run ls command, we will see "Hello.How are you all?" See below:
+Hello. How are you all?
+Desktop    Downloads         Music     Public     Videos
+Documents  examples.desktop  Pictures  Templates
+
+#############Now we will remove the changes we made.##########
+fokhrul@fokhrul-VirtualBox:~$ cd Downloads/
+fokhrul@fokhrul-VirtualBox:~/Downloads$ ls
+Hello. How are you all?
+coreutils-8.28  coreutils-8.28.tar.xz
+
+fokhrul@fokhrul-VirtualBox:~/Downloads$ cd coreutils-8.28/
+
+fokhrul@fokhrul-VirtualBox:~/Downloads/coreutils-8.28$ cd src
+fokhrul@fokhrul-VirtualBox:~/Downloads/coreutils-8.28/src$ nano ls.c      ;I removed the sentence I added
+
+fokhrul@fokhrul-VirtualBox:~/Downloads/coreutils-8.28/src$ cd ..
+fokhrul@fokhrul-VirtualBox:~/Downloads/coreutils-8.28$ make && sudo make install      ;Running both commands concurrently
+
+#########Okay. Now as we undid our changes, we will shut down and reopen our terminal.########
+
+fokhrul@fokhrul-VirtualBox:~$ ls          ;Now running the ls command does not show "Hello. How are you all?"
+Desktop    Downloads         Music     Public     Videos
+Documents  examples.desktop  Pictures  Templates
+
+
