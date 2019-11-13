@@ -1,0 +1,84 @@
+
+
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ nano loop.sh
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./loop.sh
+Parameter 1: 
+Parameter 2: 
+Parameter 3: 
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./loop.sh fokhrul
+Parameter 1: fokhrul
+Parameter 2: 
+Parameter 3: 
+
+Number of parameters: 1
+Parameter 1: fokhrul
+Parameter 2: 
+Parameter 3: 
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./loop.sh fokhrul alam
+Parameter 1: fokhrul
+Parameter 2: alam
+Parameter 3: 
+
+Number of parameters: 2
+Parameter 1: fokhrul
+Parameter 2: alam
+Parameter 3: 
+
+Number of parameters: 1
+Parameter 1: alam
+Parameter 2: 
+Parameter 3: 
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./loop.sh fokhrul alam mrinal
+Parameter 1: fokhrul
+Parameter 2: alam
+Parameter 3: mrinal
+
+Number of parameters: 3
+Parameter 1: fokhrul
+Parameter 2: alam
+Parameter 3: mrinal
+
+Number of parameters: 2
+Parameter 1: alam
+Parameter 2: mrinal
+Parameter 3: 
+
+Number of parameters: 1
+Parameter 1: mrinal
+Parameter 2: 
+Parameter 3: 
+
+fokhrul@fokhrul-VirtualBox:~/Desktop$ ./loop.sh fokhrul alam mrinal Bangladesh
+Parameter 1: fokhrul
+Parameter 2: alam
+Parameter 3: mrinal
+
+Number of parameters: 4
+Parameter 1: fokhrul
+Parameter 2: alam
+Parameter 3: mrinal
+
+Number of parameters: 3
+Parameter 1: alam
+Parameter 2: mrinal
+Parameter 3: Bangladesh
+
+Number of parameters: 2
+Parameter 1: mrinal
+Parameter 2: Bangladesh
+Parameter 3: 
+
+Number of parameters: 1
+Parameter 1: Bangladesh
+Parameter 2: 
+Parameter 3: 
+
+
+
+
+
+
