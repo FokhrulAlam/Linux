@@ -1,0 +1,47 @@
+
+
+root@fokhrul-VirtualBox:~# uname        ;Shows the currently running kernel
+Linux
+
+root@fokhrul-VirtualBox:~# uname -m       ;Shows machine type
+x86_64
+
+root@fokhrul-VirtualBox:~# uname -rm      ;Shows the exact release of the kernel
+5.0.0-35-generic x86_64
+
+root@fokhrul-VirtualBox:~# uname -a       ;Shows all the information about the kernel
+Linux fokhrul-VirtualBox 5.0.0-35-generic #38~18.04.1-Ubuntu SMP Mon Nov 11 09:16:10 UTC 2019 x86_64 GNU/Linux
+
+root@fokhrul-VirtualBox:~# lsmod        ;Displays a list of all currently loaded kernel module
+Module                  Size  Used by     ;
+cpuid                  16384  0
+btrfs                1175552  0
+zstd_compress         163840  1 btrfs
+xor                    24576  1 btrfs
+raid6_pq              114688  1 btrfs
+ufs                    81920  0
+
+root@fokhrul-VirtualBox:~# modinfo cpuid        ;Shows information about a specific kernel module
+filename:       /lib/modules/5.0.0-35-generic/kernel/arch/x86/kernel/cpuid.ko
+license:        GPL
+description:    x86 generic CPUID driver
+author:         H. Peter Anvin <hpa@zytor.com>
+srcversion:     8A4E1AE274AD8E92BAD8CB5
+depends:        
+retpoline:      Y
+intree:         Y
+name:           cpuid
+vermagic:       5.0.0-35-generic SMP mod_unload 
+signat:         PKCS#7
+signer:         
+sig_key:        
+sig_hashalgo:   md4
+
+root@fokhrul-VirtualBox:~# modprobe -r cpuid      ;Unloading the cpuid module
+
+root@fokhrul-VirtualBox:~# modprobe cpuid       ;Loading cpuid module
+
+
+
+
+
