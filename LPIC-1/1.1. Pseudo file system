@@ -1,0 +1,25 @@
+We will see /proc and /sys file systems.
+
+########/proc ########
+root@fokhrul-VirtualBox:~# cd /proc
+root@fokhrul-VirtualBox:/proc# ls
+
+root@fokhrul-VirtualBox:/proc# cat cpuinfo
+
+root@fokhrul-VirtualBox:/proc# cd 1
+root@fokhrul-VirtualBox:/proc/1# cat cmdline
+/sbin/initsplash
+
+
+######### /sys #############
+root@fokhrul-VirtualBox:~# cd /sys
+
+root@fokhrul-VirtualBox:/sys# ls
+block  class  devices   fs          kernel  power
+bus    dev    firmware  hypervisor  module
+
+
+
+
+
+
