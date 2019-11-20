@@ -1,0 +1,61 @@
+
+
+root@fokhrul-VirtualBox:~# ls /dev        ;Shows all connected hardware in the system
+
+root@fokhrul-VirtualBox:~# ls /dev/cpu        ;Seeing cpu
+0
+root@fokhrul-VirtualBox:~# ls /dev/cpu/0
+cpuid
+
+root@fokhrul-VirtualBox:~# ls /dev/dri
+by-path  card0  renderD128
+
+root@fokhrul-VirtualBox:~# lspci        ;Displays information on all the PCI devices connected to the system.
+00:00.0 Host bridge: Intel Corporation 440FX - 82441FX PMC [Natoma] (rev 02)
+00:01.0 ISA bridge: Intel Corporation 82371SB PIIX3 ISA [Natoma/Triton II]
+00:01.1 IDE interface: Intel Corporation 82371AB/EB/MB PIIX4 IDE (rev 01)
+00:02.0 VGA compatible controller: VMware SVGA II Adapter
+00:03.0 Ethernet controller: Intel Corporation 82540EM Gigabit Ethernet Controller (rev 02)
+
+root@fokhrul-VirtualBox:~# lspci -k       ;Shows the information in a better way
+00:00.0 Host bridge: Intel Corporation 440FX - 82441FX PMC [Natoma] (rev 02)
+00:01.0 ISA bridge: Intel Corporation 82371SB PIIX3 ISA [Natoma/Triton II]
+00:01.1 IDE interface: Intel Corporation 82371AB/EB/MB PIIX4 IDE (rev 01)
+	Kernel driver in use: ata_piix
+	Kernel modules: pata_acpi
+00:02.0 VGA compatible controller: VMware SVGA II Adapter
+	Subsystem: VMware SVGA II Adapter
+	Kernel driver in use: vmwgfx
+	Kernel modules: vmwgfx
+
+root@fokhrul-VirtualBox:~# lsusb        ;Shows the usb hardrive connected
+Bus 001 Device 002: ID 80ee:0021 VirtualBox USB Tablet
+Bus 001 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+
+root@fokhrul-VirtualBox:~# lscpu        ;Displays information on the processor
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              1
+On-line CPU(s) list: 0
+Thread(s) per core:  1
+Core(s) per socket:  1
+Socket(s):           1
+NUMA node(s):        1
+Vendor ID:           GenuineIntel
+CPU family:          6
+Model:               61
+Model name:          Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz
+
+root@fokhrul-VirtualBox:~# lsblk        ;Displays information about the harddisk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+loop0    7:0    0   3.7M  1 loop /snap/gnome-system-monitor/107
+loop1    7:1    0  54.5M  1 loop /snap/core18/1265
+loop2    7:2    0  42.8M  1 loop /snap/gtk-common-themes/1313
+loop3    7:3    0  14.8M  1 loop /snap/gnome-characters/359
+loop5    7:5    0  1008K  1 loop /snap/gnome-logs/61
+
+
+
+
+
